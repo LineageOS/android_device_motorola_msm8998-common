@@ -347,13 +347,12 @@ vendor/lib64/libgcs.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Media
-vendor/lib/libI420colorconvert.so
+lib/extractors/libmmparserextractor.so
 vendor/lib/libOmxVideoDSMode.so
 -vendor/lib/libgpustats.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libvqzip.so
-vendor/lib64/libI420colorconvert.so
 -vendor/lib64/libgpustats.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal_proprietary.so
