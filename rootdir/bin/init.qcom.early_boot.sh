@@ -282,7 +282,6 @@ case "$target" in
     "msm8998" | "apq8098_latv")
         case "$soc_hwplatform" in
             *)
-                setprop vendor.rild.libpath "/vendor/lib64/libril-qc-qmi-1.so"
                 setprop vendor.display.lcd_density 560
                 ;;
         esac
@@ -335,41 +334,6 @@ case "$target" in
            385)
                setprop vendor.media.target.version 1
         esac
-        if [ -f /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
-            modem=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                    sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
-                    sed 's/.*AT.\(.*\)/\1/g' | cut -d \- -f 1`
-            # In SDM660 if modem version is greater than 3.1, need
-            # to use the new vendor-ril which supports L+L feature
-            # otherwise use the existing old one.
-            zygote=`getprop ro.vendor.zygote`
-            case "$zygote" in
-            "zygote64_32")
-                if [ "$modem" \< "3.1" ]; then
-                    setprop vendor.rild.libpath "/vendor/lib64/libril-qc-qmi-1.so"
-                else
-                    setprop vendor.rild.libpath "/vendor/lib64/libril-qc-hal-qmi.so"
-                fi
-                ;;
-            "zygote32")
-                if [ "$modem" \< "3.1" ]; then
-                    setprop vendor.rild.libpath "/vendor/lib/libril-qc-qmi-1.so"
-                else
-                    setprop vendor.rild.libpath "/vendor/lib/libril-qc-hal-qmi.so"
-                fi
-                ;;
-            esac
-        else
-            zygote=`getprop ro.zygote`
-            case "$zygote" in
-            "zygote64_32")
-                setprop vendor.rild.libpath "/vendor/lib64/libril-qc-qmi-1.so"
-                ;;
-            "zygote32")
-                setprop vendor.rild.libpath "/vendor/lib/libril-qc-qmi-1.so"
-                ;;
-            esac
-        fi
         ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
