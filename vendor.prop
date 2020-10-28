@@ -164,7 +164,6 @@ ro.telephony.default_network=10,10
 ro.vendor.build.vendorprefix=/vendor
 ro.vendor.telephony.default_network=10,10
 ro.vendor.use_data_netmgrd=true
-vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 # Sensors
 ro.vendor.sensors.smd=false
