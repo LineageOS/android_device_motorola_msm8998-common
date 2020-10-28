@@ -1066,10 +1066,6 @@ service vendor.qdmastatsd /vendor/bin/qdmastatsd
     user system
     group readproc system net_bw_stats radio
 
-# Set vendor-ril lib path based on Meta version
-on property:vendor.rild.libpath=*
-    setprop rild.libpath ${vendor.rild.libpath}
-
 on property:ro.vendor.radio.noril=*
     setprop ro.radio.noril ${ro.vendor.radio.noril}
 
