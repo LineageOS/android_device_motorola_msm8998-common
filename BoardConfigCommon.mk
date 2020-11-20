@@ -113,18 +113,13 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
-# Properties
-TARGET_ODM_PROP += $(PLATFORM_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
-TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
-TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
+# RIL
+CUSTOM_APNS_FILE := $(DEVICE_PATH)/configs/sprint_apns.xml
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
 ODM_MANIFEST_SKUS += qcril
 ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/odm_manifest_qcril.xml
