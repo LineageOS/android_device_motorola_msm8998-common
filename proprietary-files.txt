@@ -486,7 +486,6 @@ product/etc/permissions/telephonyservice.xml:system_ext/etc/permissions/telephon
 product/framework/QtiTelephonyServicelibrary.jar:system_ext/framework/QtiTelephonyServicelibrary.jar
 product/framework/qcrilhook.jar:system_ext/framework/qcrilhook.jar
 product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/bin/ATFWD-daemon
 vendor/bin/adpl
 vendor/bin/hw/qcrild
 vendor/bin/ipacm-diag
@@ -512,7 +511,6 @@ vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 -vendor/lib/libqmiservices.so
 vendor/lib/vendor.qti.hardware.radio.am@1.0.so
-vendor/lib/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib/vendor.qti.hardware.radio.ims@1.0.so
 vendor/lib/vendor.qti.hardware.radio.ims@1.1.so
 vendor/lib/vendor.qti.hardware.radio.ims@1.2.so
@@ -566,7 +564,6 @@ vendor/lib64/qcrild_librilutils.so
 vendor/lib64/qtibus.so|a0df01b61344ab30ffa8849c324d253dbf3434d7
 vendor/lib64/qtimutex.so|fcdfa429a467827cc84cccf5cba2ec3206346717
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
-vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.2.so
