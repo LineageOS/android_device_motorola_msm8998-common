@@ -68,24 +68,18 @@ function blob_fixup() {
             ;;
         # Fix missing symbols
         system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so | system_ext/lib/lib-imscamera.so | system_ext/lib/lib-imsvideocodec.so)
-            for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
-            done
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
             ;;
         # memset shim
         vendor/bin/charge_only_mode)
-            for  LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
-            done
+            grep -q "libmemset_shim.so" "${2}" || "${PATCHELF}" --add-needed "libmemset_shim.so" "${2}"
             ;;
         vendor/bin/pm-service)
             grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
         # Fix missing symbols
         vendor/lib/libmot_gpu_mapper.so)
-            for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${LIBGUI_SHIM}"
-            done
+            grep -q "libgui_shim_vendor.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${2}"
             ;;
         # Load wrapped shim
         vendor/lib64/libmdmcutback.so)
@@ -93,9 +87,7 @@ function blob_fixup() {
             ;;
         # Fix missing symbols
         vendor/lib64/libril-qc-hal-qmi.so)
-            for  LIBCUTILS_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
-            done
+            grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
             ;;
         system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml | system_ext/etc/permissions/qcrilhook.xml | system_ext/etc/permissions/telephonyservice.xml)
         # Move telephony packages to /system_ext
