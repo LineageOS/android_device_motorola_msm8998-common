@@ -1,6 +1,15 @@
-# Dev block nodes for eMMC
+# UFSHC A/B partitions
+/dev/block/platform/soc/1da4000\.ufshc/sd[abef]          u:object_r:gpt_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]4           u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]9           u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]12          u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]16          u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]19          u:object_r:system_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[ef]20          u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/sd[cd]            u:object_r:xbl_block_device:s0
+
+# EMMC A/B partitions (sdm660)
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/persist2          u:object_r:persist_block_device:s0
-# EMMC A/B partitions
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/dto_[ab]          u:object_r:custom_ab_block_device:s0
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/fsg_[ab]          u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/logo_[ab]         u:object_r:custom_ab_block_device:s0
@@ -32,9 +41,12 @@
 /sys/devices/virtual/laser(/.*)?                              u:object_r:sysfs_sensor:s0
 /sys/devices/virtual/input/input4(/.*)?                       u:object_r:sysfs_sensor:s0
 
+/(vendor|system/vendor)/bin/vl53l1_daemon                     u:object_r:vl53l1_exec:s0
+
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.audio@2\.0-service                        u:object_r:hal_audio_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-fpcservice    u:object_r:hal_fingerprint_fpc_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service-ets   u:object_r:hal_fingerprint_fpc_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.nash                   u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.msm8998    u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.1-service\.msm8998    u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@1\.1-service\.msm8998  u:object_r:hal_thermal_default_exec:s0
@@ -74,6 +86,15 @@
 /(vendor|system/vendor)/bin/charge_only_mode             u:object_r:charge_only_exec:s0
 
 # Battery and healthd
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/battery(/.*)?      u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/dc(/.*)?           u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/main(/.*)?         u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/pc_port(/.*)?      u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/usb(/.*)?          u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/usbeb(/.*)?        u:object_r:sysfs_healthd:s0
+/sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/wireless(/.*)?     u:object_r:sysfs_healthd:s0
+
+# Battery and healthd (sdm660)
 /sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-00/800f000\.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery(/.*)?      u:object_r:sysfs_healthd:s0
 /sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-00/800f000\.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/dc(/.*)?           u:object_r:sysfs_healthd:s0
 /sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-00/800f000\.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/main(/.*)?         u:object_r:sysfs_healthd:s0
