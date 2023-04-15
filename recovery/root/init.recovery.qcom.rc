@@ -1,8 +1,8 @@
 import /init.recovery.${ro.boot.device}.rc
 
 on fs
-    wait /dev/block/platform/soc/c0c4000.sdhci
-    symlink /dev/block/platform/soc/c0c4000.sdhci /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
     setprop ro.build.system_root_image true
 

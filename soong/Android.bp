@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-motorola-sdm660-plugins",
-    pkgPath: "device/motorola/sdm660-common",
+    name: "soong-motorola-msm8998-plugins",
+    pkgPath: "device/motorola/msm8998-common",
     deps: [
         "blueprint",
         "blueprint-pathtools",

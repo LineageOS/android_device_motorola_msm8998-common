@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#ifndef ANDROID_HARDWARE_THERMAL_V1_1_SDM660_THERMAL_H
-#define ANDROID_HARDWARE_THERMAL_V1_1_SDM660_THERMAL_H
+
+#pragma once
 
 #include <android/hardware/thermal/1.1/IThermal.h>
 #include <android/hardware/thermal/1.1/IThermalCallback.h>
@@ -64,5 +64,3 @@ struct Thermal : public IThermal {
 }  // namespace thermal
 }  // namespace hardware
 }  // namespace android
-
-#endif  // ANDROID_HARDWARE_THERMAL_V1_1_SDM660_THERMAL_H

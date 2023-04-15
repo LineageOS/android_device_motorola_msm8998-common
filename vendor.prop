@@ -1,7 +1,3 @@
-#
-# vendor props for sdm660
-#
-
 # Audio
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
@@ -116,13 +112,12 @@ debug.sf.hw=1
 debug.sf.latch_unsignaled=0
 dev.pm.dyn_samplingrate=1
 ro.hardware.egl=adreno
-ro.hardware.vulkan=sdm660
 ro.opengles.version=196610
 vendor.display.disable_scaler=1
 vendor.gralloc.enable_fb_ubwc=1
 
 # Factory reset partition
-ro.frp.pst=/dev/block/platform/soc/c0c4000.sdhci/by-name/frp
+ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
@@ -193,7 +188,6 @@ ro.crypto.volume.filenames_mode=aes-256-cts
 
 # SOC
 ro.soc.manufacturer=Qualcomm
-ro.soc.model=SDM660
 
 # SurfaceFlinger
 debug.sf.early_app_phase_offset_ns=1500000

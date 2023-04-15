@@ -61,7 +61,6 @@ on charger
     setprop sys.usb.configfs 1
 
 on moto-charger
-    setprop ro.board.platform sdm660
     trigger firmware_mounts_complete
     setprop sys.usb.config charging
     start vendor.gbmodinstall

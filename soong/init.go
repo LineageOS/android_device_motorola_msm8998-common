@@ -1,4 +1,4 @@
-package sdm660
+package msm8998
 
 import (
     "android/soong/android"
@@ -9,7 +9,7 @@ import (
 func initFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("MOTOROLA_SDM660_INIT")
+    var config = ctx.AConfig().VendorConfig("MOTOROLA_MSM8998_INIT")
     var lib = strings.TrimSpace(config.String("DEVICE_LIB"))
 
     if len(strings.TrimSpace(lib)) != 0 {
@@ -21,7 +21,7 @@ func initFlags(ctx android.BaseContext) []string {
 func initStaticLibs(ctx android.BaseContext) []string {
     var staticlibs []string
 
-    var config = ctx.AConfig().VendorConfig("MOTOROLA_SDM660_INIT")
+    var config = ctx.AConfig().VendorConfig("MOTOROLA_MSM8998_INIT")
     var lib = strings.TrimSpace(config.String("DEVICE_LIB"))
 
     if len(strings.TrimSpace(lib)) != 0 {
