@@ -22,7 +22,7 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/motorola/sdm660-common/sdm660-common-vendor.mk)
+$(call inherit-product, vendor/motorola/msm8998-common/msm8998-common-vendor.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -108,9 +108,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    gralloc.sdm660 \
-    hwcomposer.sdm660 \
-    memtrack.sdm660 \
+    gralloc.$(TARGET_MOTO_PLATFORM) \
+    hwcomposer.$(TARGET_MOTO_PLATFORM) \
+    memtrack.$(TARGET_MOTO_PLATFORM) \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan \
@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
 
 # LED packages
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.sdm660
+    android.hardware.light@2.0-service.msm8998
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -383,7 +383,7 @@ PRODUCT_BOOT_JARS += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.1-service.sdm660
+    android.hardware.thermal@1.1-service.msm8998
 
 # Touchscreen
 PRODUCT_PACKAGES += \
@@ -404,7 +404,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 # Update this list with what each blob is actually for
-# libstdc++: camera.sdm660
+# libstdc++: camera.msm8998
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
     libgui_vendor \

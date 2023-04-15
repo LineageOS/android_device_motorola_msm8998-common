@@ -22,7 +22,7 @@
 # definition file).
 #
 
-PLATFORM_PATH := device/motorola/sdm660-common
+PLATFORM_PATH := device/motorola/msm8998-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
@@ -42,8 +42,6 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a73
 
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOOTLOADER_BOARD_NAME := SDM660
-TARGET_BOARD_PLATFORM := sdm660
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
@@ -87,8 +85,8 @@ TARGET_FS_CONFIG_GEN += \
     $(PLATFORM_PATH)/mot_aids.fs
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_sdm660
-TARGET_RECOVERY_DEVICE_MODULES := libinit_sdm660
+TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8998
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3

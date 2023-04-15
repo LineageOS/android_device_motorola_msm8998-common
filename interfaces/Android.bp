@@ -1,4 +1,4 @@
 hidl_package_root {
     name: "com.fingerprints",
-    path: "device/motorola/sdm660-common/interfaces",
+    path: "device/motorola/msm8998-common/interfaces",
 }

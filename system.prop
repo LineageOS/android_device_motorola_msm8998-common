@@ -1,7 +1,3 @@
-#
-# system props for sdm660
-#
-
 # Audio
 use.voice.path.for.pcm.voip=false
 
