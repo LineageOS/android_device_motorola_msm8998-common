@@ -4,8 +4,10 @@ service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.m
     group system
 
 on boot
-    # Change ownership and permission for leds backlight
+    # Backlight
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
+
+    # SDM660 based
     chown system system /sys/class/leds/charging/brightness
     chmod 0664 /sys/class/leds/charging/brightness
     chown system system /sys/class/leds/charging/blink
@@ -22,3 +24,19 @@ on boot
     chmod 660 /sys/class/leds/charging/duty_pcts
     chown system system /sys/class/leds/charging/start_idx
     chmod 660 /sys/class/leds/charging/start_idx
+
+    # Nash
+    chown system system /sys/class/leds/white/blink
+    chown system system /sys/class/leds/white/brightness
+    chown system system /sys/class/leds/white/duty_pcts
+    chown system system /sys/class/leds/white/pause_hi
+    chown system system /sys/class/leds/white/pause_lo
+    chown system system /sys/class/leds/white/ramp_step_ms
+    chown system system /sys/class/leds/white/start_idx
+    chmod 0660 /sys/class/leds/white/blink
+    chmod 0660 /sys/class/leds/white/brightness
+    chmod 0660 /sys/class/leds/white/duty_pcts
+    chmod 0660 /sys/class/leds/white/pause_hi
+    chmod 0660 /sys/class/leds/white/pause_lo
+    chmod 0660 /sys/class/leds/white/ramp_step_ms
+    chmod 0660 /sys/class/leds/white/start_idx
