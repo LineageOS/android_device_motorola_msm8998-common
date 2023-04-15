@@ -32,6 +32,7 @@ namespace implementation {
 
 #define LCD_LED         LEDS "lcd-backlight/"
 #define CHARGING_LED    LEDS "charging/"
+#define WHITE_LED       LEDS "white/"
 
 #define BRIGHTNESS      "brightness"
 #define DUTY_PCTS       "duty_pcts"
@@ -53,6 +54,11 @@ namespace implementation {
  * Each value represents a duty percent (0 - 100) for the led pwm.
  */
 static int32_t BRIGHTNESS_RAMP[RAMP_STEPS] = {0, 12, 25, 37, 50, 72, 85, 100};
+/*
+ * Each value represents a duty percent (0 - 100) for the led pwm.
+ */
+std::string led_path = CHARGING_LED;
+
 
 /*
  * Write value to path and close file.
@@ -115,7 +121,7 @@ static void handleNotification(const LightState& state) {
         brightness = (brightness * alpha) / 0xFF;
     
     /* Disable blinking. */
-    set(CHARGING_LED BLINK, 0);
+    set(led_path + BLINK, 0);
 
     if (state.flashMode == Flash::TIMED) {
         /*
@@ -133,16 +139,16 @@ static void handleNotification(const LightState& state) {
         }
 
         /* Set LED */
-        set(CHARGING_LED START_IDX, 0 * RAMP_STEPS);
-        set(CHARGING_LED DUTY_PCTS, getScaledRamp(brightness));
-        set(CHARGING_LED PAUSE_LO, pauseLo);
-        set(CHARGING_LED PAUSE_HI, pauseHi);
-        set(CHARGING_LED RAMP_STEP_MS, stepDuration);
+        set(led_path + START_IDX, 0 * RAMP_STEPS);
+        set(led_path + DUTY_PCTS, getScaledRamp(brightness));
+        set(led_path + PAUSE_LO, pauseLo);
+        set(led_path + PAUSE_HI, pauseHi);
+        set(led_path + RAMP_STEP_MS, stepDuration);
 
         /* Enable blinking. */
-        set(CHARGING_LED BLINK, 1);
+        set(led_path + BLINK, 1);
     } else {
-        set(CHARGING_LED BRIGHTNESS, brightness);
+        set(led_path + BRIGHTNESS, brightness);
     }
 }
 
@@ -153,7 +159,14 @@ static std::map<Type, std::function<void(const LightState&)>> lights = {
     {Type::ATTENTION, handleNotification},
 };
 
-Light::Light() {}
+Light::Light() {
+    std::ofstream file(led_path);
+
+    if (!file.is_open()) {
+        ALOGE("Switching to WHITE LED");
+        led_path = WHITE_LED;
+    }
+}
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
     auto it = lights.find(type);
