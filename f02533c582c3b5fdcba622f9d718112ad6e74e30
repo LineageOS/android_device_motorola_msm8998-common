@@ -48,6 +48,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f70cbcf4_dd14adbf",
+        "filename": "light/Light.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-04-16T23:32:57Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4ef79b9f_c57946f2",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 4
+      },
+      "revId": "f02533c582c3b5fdcba622f9d718112ad6e74e30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9a8fbbe6_02b38223",
