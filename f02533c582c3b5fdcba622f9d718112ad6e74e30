@@ -22,6 +22,29 @@
       },
       "revId": "f02533c582c3b5fdcba622f9d718112ad6e74e30",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a8fbbe6_02b38223",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-04-16T22:38:18Z",
+      "side": 1,
+      "message": "hrm. I forget - this prebuilt or built? Either way, maybe labeling msm8998 makes more sense? Messi will use it too.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 131
+      },
+      "revId": "f02533c582c3b5fdcba622f9d718112ad6e74e30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
