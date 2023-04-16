@@ -26,6 +26,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "4ef79b9f_c57946f2",
+        "filename": "light/Light.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-04-16T23:02:05Z",
+      "side": 1,
+      "message": "i try not to clean up in functional commits, to keep diffs clean. but if you insist ;)",
+      "parentUuid": "7619905e_cdade065",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 4
+      },
+      "revId": "f02533c582c3b5fdcba622f9d718112ad6e74e30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9a8fbbe6_02b38223",
         "filename": "sepolicy/vendor/file_contexts",
         "patchSetId": 1
@@ -37,6 +61,30 @@
       "writtenOn": "2023-04-16T22:38:18Z",
       "side": 1,
       "message": "hrm. I forget - this prebuilt or built? Either way, maybe labeling msm8998 makes more sense? Messi will use it too.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 131
+      },
+      "revId": "f02533c582c3b5fdcba622f9d718112ad6e74e30",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "257c50f9_1bd21276",
+        "filename": "sepolicy/vendor/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-04-16T23:02:05Z",
+      "side": 1,
+      "message": "built. seems this was imported to mata originally... left it in for now, though we might wanna remove it altogether? health situation is a bit confusing, should discuss",
+      "parentUuid": "9a8fbbe6_02b38223",
       "range": {
         "startLine": 48,
         "startChar": 0,
