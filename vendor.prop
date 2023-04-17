@@ -108,8 +108,6 @@ vendor.display.enable_default_color_mode=1
 
 # Display
 debug.renderengine.backend=skiaglthreaded
-debug.sf.hw=1
-debug.sf.latch_unsignaled=0
 dev.pm.dyn_samplingrate=1
 ro.hardware.egl=adreno
 ro.opengles.version=196610
