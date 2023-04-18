@@ -1,0 +1,3 @@
+# Greybus
+type sysfs_greybus, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_mods_camd, fs_type, sysfs_type, mlstrustedobject;
