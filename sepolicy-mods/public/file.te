@@ -1,0 +1,2 @@
+# Greybus firmware
+type greybus_fw_data_file, file_type, core_data_file_type, data_file_type, mlstrustedobject;
