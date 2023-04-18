@@ -147,6 +147,11 @@ VENDOR_SECURITY_PATCH := 2021-02-01
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
+ifdef TARGET_SUPPORTS_MOTO_MODS
+    PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/private
+    PRODUCT_PUBLIC_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/public
+    BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy-mods/vendor
+endif
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
