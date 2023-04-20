@@ -16,6 +16,23 @@
       "message": "https://github.com/LineageOS/android_packages_apps_FMRadio/blob/3c2651f3c224c4846fa4e543731746d5f4c8490d/jni/fmr/Android.mk#L15 not deprecated as of last month",
       "revId": "3a53114e8d36017c8e5643225a5a9e6f088fe4de",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f752ecbe_c3e6c709",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-04-20T21:52:49Z",
+      "side": 1,
+      "message": "huh? that link leads to BOARD_HAVE_QCOM_FM ?",
+      "revId": "3a53114e8d36017c8e5643225a5a9e6f088fe4de",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
