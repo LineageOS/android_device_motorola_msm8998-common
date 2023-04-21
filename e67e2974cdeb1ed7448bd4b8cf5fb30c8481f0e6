@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f6b6352_6ed82d0e",
+        "filename": "motomods_manifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2023-04-21T17:28:58Z",
+      "side": 1,
+      "message": "Drop this.",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 19,
+        "endChar": 53
+      },
+      "revId": "e67e2974cdeb1ed7448bd4b8cf5fb30c8481f0e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
