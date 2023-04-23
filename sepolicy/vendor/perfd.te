@@ -3,11 +3,6 @@ type perfd_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(perfd)
 
-# perfd uses kill(pid, 0) to determine if a process exists.
-# Determining if a process exists does not require the kill capability
-# since a permission denied indicates the process exists.
-dontaudit perfd self:capability kill;
-
 allow perfd mediacodec:process signull;
 allow perfd hal_power_default:process signull;
 
