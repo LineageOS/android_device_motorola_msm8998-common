@@ -16,6 +16,23 @@
       "message": "Any news on greybus module not loading using LLVM?",
       "revId": "f41484086bc158c2900f5a9b82ff764e62259bcd",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a933a72b_f88997ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-04-26T14:20:00Z",
+      "side": 1,
+      "message": "just tbc: kernel is currently at https://github.com/vware/android_kernel_motorola_msm8998/\n\nup for testing, as discussed",
+      "revId": "f41484086bc158c2900f5a9b82ff764e62259bcd",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
