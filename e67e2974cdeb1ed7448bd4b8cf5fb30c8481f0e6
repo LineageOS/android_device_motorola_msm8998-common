@@ -22,6 +22,30 @@
       },
       "revId": "e67e2974cdeb1ed7448bd4b8cf5fb30c8481f0e6",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "027c5985_26b81976",
+        "filename": "motomods_manifest.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-04-29T21:38:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f6b6352_6ed82d0e",
+      "range": {
+        "startLine": 19,
+        "startChar": 8,
+        "endLine": 19,
+        "endChar": 53
+      },
+      "revId": "e67e2974cdeb1ed7448bd4b8cf5fb30c8481f0e6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
