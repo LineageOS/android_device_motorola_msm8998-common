@@ -28,11 +28,13 @@ namespace light {
 namespace V2_0 {
 namespace implementation {
 
-#define LEDS            "/sys/class/leds/"
+#define LED_PATH(led)                       "/sys/class/leds/" led "/"
 
-#define LCD_LED         LEDS "lcd-backlight/"
-#define CHARGING_LED    LEDS "charging/"
-#define WHITE_LED       LEDS "white/"
+static const std::string led_paths[] {
+    [LCD] = LED_PATH("lcd-backlight"),
+    [CHARGING] = LED_PATH("charging"),
+    [WHITE] = LED_PATH("white"),
+};
 
 #define BRIGHTNESS      "brightness"
 #define DUTY_PCTS       "duty_pcts"
@@ -54,10 +56,6 @@ namespace implementation {
  * Each value represents a duty percent (0 - 100) for the led pwm.
  */
 static int32_t BRIGHTNESS_RAMP[RAMP_STEPS] = {0, 12, 25, 37, 50, 72, 85, 100};
-/*
- * Each value represents a duty percent (0 - 100) for the led pwm.
- */
-std::string led_path = CHARGING_LED;
 
 
 /*
@@ -77,7 +75,7 @@ static void set(std::string path, std::string value) {
 static void set(std::string path, int value) {
     set(path, std::to_string(value));
 }
-    
+
 static uint32_t rgbToBrightness(const LightState& state) {
     uint32_t color = state.color & 0x00ffffff;
     return ((77 * ((color >> 16) & 0xff)) + (150 * ((color >> 8) & 0xff)) +
@@ -86,7 +84,7 @@ static uint32_t rgbToBrightness(const LightState& state) {
 
 static void handleBacklight(const LightState& state) {
     uint32_t brightness = rgbToBrightness(state);
-    set(LCD_LED BRIGHTNESS, brightness);
+    set(LCD BRIGHTNESS, brightness);
 }
 
 /*
@@ -119,9 +117,13 @@ static void handleNotification(const LightState& state) {
      */
     if (alpha != 0xFF)
         brightness = (brightness * alpha) / 0xFF;
-    
+
     /* Disable blinking. */
-    set(led_path + BLINK, 0);
+    if (mWhiteLed) {
+        set(WHITE + BLINK, 0);
+    } else {
+        set(CHARGING + BLINK, 0);
+    }
 
     if (state.flashMode == Flash::TIMED) {
         /*
@@ -139,16 +141,32 @@ static void handleNotification(const LightState& state) {
         }
 
         /* Set LED */
-        set(led_path + START_IDX, 0 * RAMP_STEPS);
-        set(led_path + DUTY_PCTS, getScaledRamp(brightness));
-        set(led_path + PAUSE_LO, pauseLo);
-        set(led_path + PAUSE_HI, pauseHi);
-        set(led_path + RAMP_STEP_MS, stepDuration);
+        if (mWhiteLed) {
+            set(WHITE + START_IDX, 0 * RAMP_STEPS);
+            set(WHITE + DUTY_PCTS, getScaledRamp(brightness));
+            set(WHITE + PAUSE_LO, pauseLo);
+            set(WHITE + PAUSE_HI, pauseHi);
+            set(WHITE + RAMP_STEP_MS, stepDuration);
+        } else {
+            set(CHARGING + START_IDX, 0 * RAMP_STEPS);
+            set(CHARGING + DUTY_PCTS, getScaledRamp(brightness));
+            set(CHARGING + PAUSE_LO, pauseLo);
+            set(CHARGING + PAUSE_HI, pauseHi);
+            set(CHARGING + RAMP_STEP_MS, stepDuration);
+        }
 
         /* Enable blinking. */
-        set(led_path + BLINK, 1);
+        if (mWhiteLed) {
+            set(WHITE + BLINK, 1);
+        } else {
+            set(CHARGING + BLINK, 1);
+        }
     } else {
-        set(led_path + BRIGHTNESS, brightness);
+        if (mWhiteLed) {
+            set(WHITE + BRIGHTNESS, brightness);
+        } else {
+            set(CHARGING + BRIGHTNESS, brightness);
+        }
     }
 }
 
@@ -160,12 +178,7 @@ static std::map<Type, std::function<void(const LightState&)>> lights = {
 };
 
 Light::Light() {
-    std::ofstream file(led_path);
-
-    if (!file.is_open()) {
-        ALOGE("Switching to WHITE LED");
-        led_path = WHITE_LED;
-    }
+    mWhiteLed = !access((led_paths[WHITE] + "brightness").c_str(), W_OK);
 }
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
