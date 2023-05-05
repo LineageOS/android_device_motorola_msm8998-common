@@ -1,4 +1,28 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46b709ff_8a46b3c8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-05T05:57:01Z",
+      "side": 1,
+      "message": "there\u0027s payton variants with 3GB as well, so hopefully this doesn\u0027t cause issues for those devices",
+      "range": {
+        "startLine": 9,
+        "startChar": 40,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "997dfa705e29bddb8bed5c4171f2708269f327b5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
