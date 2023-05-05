@@ -22,6 +22,30 @@
       },
       "revId": "997dfa705e29bddb8bed5c4171f2708269f327b5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7eb93f20_8a87e731",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-05-05T09:10:40Z",
+      "side": 1,
+      "message": "on the contrary, with only 3gb, we really don\u0027t wanna allocate half of it for zram",
+      "parentUuid": "46b709ff_8a46b3c8",
+      "range": {
+        "startLine": 9,
+        "startChar": 40,
+        "endLine": 9,
+        "endChar": 43
+      },
+      "revId": "997dfa705e29bddb8bed5c4171f2708269f327b5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
