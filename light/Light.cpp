@@ -160,7 +160,7 @@ static std::map<Type, std::function<void(const LightState&)>> lights = {
 };
 
 Light::Light() {
-    std::ofstream file(led_path);
+    std::ofstream file(led_path + BRIGHTNESS);
 
     if (!file.is_open()) {
         ALOGE("Switching to WHITE LED");
