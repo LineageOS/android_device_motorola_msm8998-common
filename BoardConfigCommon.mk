@@ -46,6 +46,14 @@ BOARD_USES_QCOM_HARDWARE := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# A/B updater
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor
+
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
