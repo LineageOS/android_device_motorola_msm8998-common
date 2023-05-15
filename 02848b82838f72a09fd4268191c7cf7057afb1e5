@@ -34,6 +34,23 @@
       "parentUuid": "c8b23b65_8f80ee05",
       "revId": "02848b82838f72a09fd4268191c7cf7057afb1e5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "39228d9d_f9529590",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-05-15T05:52:31Z",
+      "side": 1,
+      "message": "ooor we leave out the bootctrl hal for now",
+      "revId": "02848b82838f72a09fd4268191c7cf7057afb1e5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
