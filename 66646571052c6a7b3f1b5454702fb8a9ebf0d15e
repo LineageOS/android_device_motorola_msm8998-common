@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aca67c89_0ad3032c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-05-15T17:08:12Z",
+      "side": 1,
+      "message": "this is IZAT not GPS, but same concept, and 2 is the level almost all other devices use",
+      "revId": "66646571052c6a7b3f1b5454702fb8a9ebf0d15e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
