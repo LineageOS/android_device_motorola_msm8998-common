@@ -22,6 +22,30 @@
       },
       "revId": "f8fb9de373c294906e0d501311096bad447e3fb3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da791da6_e8ea66bb",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-05-15T18:11:06Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "a3a27dbe_5259aff0",
+      "range": {
+        "startLine": 209,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 58
+      },
+      "revId": "f8fb9de373c294906e0d501311096bad447e3fb3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
