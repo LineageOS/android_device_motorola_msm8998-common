@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ca97482_67384770",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-05-17T09:27:51Z",
+      "side": 1,
+      "message": "A bit of caution with this as in the case of payton using nash bootctrl was reverted  due to bricking the bootloader on slot change from what i recall.\nhttps://review.lineageos.org/c/LineageOS/android_device_motorola_payton/+/232690",
+      "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
