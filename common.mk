@@ -210,10 +210,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
-# LED packages
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.msm8998
-
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
