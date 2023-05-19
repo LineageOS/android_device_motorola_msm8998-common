@@ -16,6 +16,24 @@
       "message": "still WIP... my payton is still showing this stuff in logcat...\n\nE LightService: failed to write 0 to /sys/class/leds/white/blink\nE LightService: failed to write 149 to /sys/class/leds/white/brightness\n\neven though it shouldn\u0027t be using the white path...",
       "revId": "1ff8a29bab946c025e04c5e38cc73764566f8123",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d04466f0_d7dbce3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-05-19T08:14:00Z",
+      "side": 1,
+      "message": "this should be easy to debug, actually. did you check the sysfs on device? i dont have a payton here, nolen will be back with one soon tho.",
+      "parentUuid": "a2441e06_696d48f7",
+      "revId": "1ff8a29bab946c025e04c5e38cc73764566f8123",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
