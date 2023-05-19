@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2d86d4a_a93e033d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-19T04:15:45Z",
+      "side": 1,
+      "message": "So we either come up with a fix that will properly detect charging/white LED or we do this decommonize\n\nThis would need to get pushed to beckham, chef, evert and lake\nhttps://review.lineageos.org/c/LineageOS/android_device_motorola_payton/+/356744\n\nand this for nash\nhttps://review.lineageos.org/c/LineageOS/android_device_motorola_nash/+/356745",
+      "revId": "afb3c3c73f1947cdbf22715630ea45074abcf472",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
