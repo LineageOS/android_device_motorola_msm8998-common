@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2441e06_696d48f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-19T01:37:39Z",
+      "side": 1,
+      "message": "still WIP... my payton is still showing this stuff in logcat...\n\nE LightService: failed to write 0 to /sys/class/leds/white/blink\nE LightService: failed to write 149 to /sys/class/leds/white/brightness\n\neven though it shouldn\u0027t be using the white path...",
+      "revId": "1ff8a29bab946c025e04c5e38cc73764566f8123",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
