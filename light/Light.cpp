@@ -57,7 +57,6 @@ static int32_t BRIGHTNESS_RAMP[RAMP_STEPS] = {0, 12, 25, 37, 50, 72, 85, 100};
 /*
  * Each value represents a duty percent (0 - 100) for the led pwm.
  */
-std::string led_path = CHARGING_LED;
 
 
 /*
@@ -107,6 +106,7 @@ static std::string getScaledRamp(uint32_t brightness) {
 
 static void handleNotification(const LightState& state) {
     uint32_t alpha, brightness;
+    std::string led_path = CHARGING_LED;
 
     /*
      * Extract brightness from AARRGGBB.
@@ -119,7 +119,13 @@ static void handleNotification(const LightState& state) {
      */
     if (alpha != 0xFF)
         brightness = (brightness * alpha) / 0xFF;
-    
+
+    /* Check if path is accessible, if not, use alternative */
+    std::ofstream file(led_path + BRIGHTNESS);
+    if (!file.is_open()) {
+        led_path = WHITE_LED;
+    }
+
     /* Disable blinking. */
     set(led_path + BLINK, 0);
 
@@ -160,12 +166,6 @@ static std::map<Type, std::function<void(const LightState&)>> lights = {
 };
 
 Light::Light() {
-    std::ofstream file(led_path + BRIGHTNESS);
-
-    if (!file.is_open()) {
-        ALOGE("Switching to WHITE LED");
-        led_path = WHITE_LED;
-    }
 }
 
 Return<Status> Light::setLight(Type type, const LightState& state) {
