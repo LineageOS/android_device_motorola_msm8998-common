@@ -33,6 +33,23 @@
       "message": "thanks for the warning! currently a bit short on devices, but we will check",
       "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d28f64e9_a4105be2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-05-23T03:35:28Z",
+      "side": 1,
+      "message": "I just checked on my payton with this and the payton tree commit and I can flash ROM, reboot and flash MTG and reboot to system just fine\n\nI think before I remember reading about payton brick and mismatched prebuilt vendors or something? So I\u0027m unsure if this was around the same time as the bootctrl issue, but either way this commonized from nash bootctrl works fine on my payton.\n\nAlso, unsure if TWRP could be related? I remember TWRP and bootctrl on payton and nash was a nightmare... so maybe we might need to compare there too or maybe even update TWRP bootctrl to match this?",
+      "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
