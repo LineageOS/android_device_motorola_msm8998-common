@@ -67,6 +67,23 @@
       "message": "don\u0027t know about the troubles back then, but nash needed the \"don\u0027t assume a/b partitions are on the same disk\" commit. maybe payton does, too.",
       "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a693334_8b33c53b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-05-23T05:00:50Z",
+      "side": 1,
+      "message": "@andrew: do you know what happened back then?\n@marc: didyou use update-engine after having installed a build with this code?",
+      "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
