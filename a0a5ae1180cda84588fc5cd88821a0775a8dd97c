@@ -101,6 +101,24 @@
       "message": "nevermind, tried update engine and my Payton doesn\u0027t want to power on",
       "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b92d3352_a8f5c05a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 23878
+      },
+      "writtenOn": "2023-05-24T14:39:27Z",
+      "side": 1,
+      "message": "If I recall like u mention this is the offending change that broke payton during early days..\nIef0997a1d59556c08b9128777f07679f49e97877\nThis commit is only difference that jumps out between the qcom-caf bootctrl and one on msm8998-common.\n\nAt glance gpt-utils should be fine? only difference in code itself is payton does not list vbmeta partition on the PTN_SWAP_LIST and this commit: Icc4987e5e8fb1a4b55a0c8ca74c362c56dd9d0ed",
+      "parentUuid": "ac154d31_2192a0be",
+      "revId": "a0a5ae1180cda84588fc5cd88821a0775a8dd97c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
