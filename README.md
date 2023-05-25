@@ -11,3 +11,4 @@ Supported devices :
 * Motorola Z3 Play (beckham)
 * Motorola G7 Plus (lake)
 * Motorola Z2 Force (nash)
+* Motorola Z2 Force (messi)
