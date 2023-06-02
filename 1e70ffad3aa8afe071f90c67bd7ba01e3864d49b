@@ -16,6 +16,24 @@
       "message": "don\u0027t understand how, but still bricks lake",
       "revId": "1e70ffad3aa8afe071f90c67bd7ba01e3864d49b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db93fe0d_2b1086fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2023-06-02T21:59:13Z",
+      "side": 1,
+      "message": "oof... I think it\u0027s safer to just leave bootctrl the way it is, it\u0027s not like commonizing them will make the device boot/flash ROMs faster or anything",
+      "parentUuid": "fcb7f765_e3530d45",
+      "revId": "1e70ffad3aa8afe071f90c67bd7ba01e3864d49b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
