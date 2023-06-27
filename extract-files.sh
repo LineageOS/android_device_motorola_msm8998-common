@@ -69,6 +69,9 @@ function blob_fixup() {
             for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
             done
+            for LIBGUI_SHIM in $(grep -L "libui_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libui_shim.so" "${LIBGUI_SHIM}"
+            done
             ;;
         # memset shim
         vendor/bin/charge_only_mode)
@@ -80,6 +83,9 @@ function blob_fixup() {
         vendor/lib/libmot_gpu_mapper.so)
             for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${LIBGUI_SHIM}"
+            done
+            for LIBGUI_SHIM in $(grep -L "libui_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libui_shim.so" "${LIBGUI_SHIM}"
             done
             ;;
         # Load wrapped shim
