@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18765aa5_1e130660",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2023-07-22T12:58:02Z",
+      "side": 1,
+      "message": "So if I\u0027m correct, the qcom sepolicy change breaks micro USB devices that use the default AOSP HAL. In that case, I think the rules should be added back to qcom sepolicy to cover all micro USB devices.",
+      "revId": "2735bf34c5fa0ea03b733d8096a82f09c37d1086",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
