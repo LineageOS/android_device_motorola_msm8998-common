@@ -51,6 +51,24 @@
       "message": "i will be cleaning up these messy policies soon anyway, will take care of it then",
       "revId": "2735bf34c5fa0ea03b733d8096a82f09c37d1086",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79add06a_20c1524e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2023-07-24T15:18:14Z",
+      "side": 1,
+      "message": "I\u0027ve seen other devices running 4.4 using this patch after applying the legacy-um change, so I think it would be a good idea.",
+      "parentUuid": "6cca4891_cbc903b8",
+      "revId": "2735bf34c5fa0ea03b733d8096a82f09c37d1086",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
