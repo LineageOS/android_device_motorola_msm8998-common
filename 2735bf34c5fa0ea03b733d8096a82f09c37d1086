@@ -86,6 +86,24 @@
       "message": "i don\u0027t think it\u0027s a matter of kernel version, but usb type... i assume you didn\u0027t see the denials mentioned in the commit message?",
       "revId": "2735bf34c5fa0ea03b733d8096a82f09c37d1086",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a30d01d1_670bf03b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 22728
+      },
+      "writtenOn": "2023-07-25T12:48:30Z",
+      "side": 1,
+      "message": "OFC I see because I authored this, I mentioned the 4.4 devices because they are stale at this old rules.",
+      "parentUuid": "0d999f67_7483ff50",
+      "revId": "2735bf34c5fa0ea03b733d8096a82f09c37d1086",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
