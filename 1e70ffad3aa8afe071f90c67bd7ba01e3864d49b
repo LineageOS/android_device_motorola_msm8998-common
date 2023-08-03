@@ -68,6 +68,24 @@
       "message": "Rather than ressurect this there was a recent discussion of moving bootctrl into hardware/motorola repo that supports ufs and emmc based on\n\nhttps://github.com/moto-common/platform_hardware_qcom_bootctrl",
       "revId": "1e70ffad3aa8afe071f90c67bd7ba01e3864d49b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c91f693_0dce9bc0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-08-03T10:44:03Z",
+      "side": 1,
+      "message": "ah yeah, thanks, i knew about that one, but i was still gonna resurrect the device specific ones, just missed this one",
+      "parentUuid": "1f1801f8_dfdec31f",
+      "revId": "1e70ffad3aa8afe071f90c67bd7ba01e3864d49b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
