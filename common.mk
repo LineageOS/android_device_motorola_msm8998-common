@@ -409,7 +409,7 @@ PRODUCT_COPY_FILES += \
 # Update this list with what each blob is actually for
 # libstdc++: camera.msm8998
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
+    libstdc++_vendor \
     libgui_vendor
 
 # Wifi
