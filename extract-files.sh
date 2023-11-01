@@ -76,6 +76,9 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
             done
             ;;
+        vendor/bin/pm-service)
+            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            ;;
         # Fix missing symbols
         vendor/lib/libmot_gpu_mapper.so)
             for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
