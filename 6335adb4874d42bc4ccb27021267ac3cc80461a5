@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc3b8166_cee4eedd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14010
+      },
+      "writtenOn": "2023-11-02T14:45:50Z",
+      "side": 1,
+      "message": "You can use this upstream patch https://review.lineageos.org/c/LineageOS/android_device_motorola_sm6225-common/+/365623",
+      "revId": "6335adb4874d42bc4ccb27021267ac3cc80461a5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
