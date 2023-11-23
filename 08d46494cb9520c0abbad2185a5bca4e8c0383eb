@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "98cdf036_4f06d80a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 5911
+      },
+      "writtenOn": "2023-11-23T15:54:04Z",
+      "side": 1,
+      "message": "as discussed, i would prefer you hold off on this until the kernel rebase is done",
+      "revId": "08d46494cb9520c0abbad2185a5bca4e8c0383eb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
