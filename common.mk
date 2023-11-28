@@ -409,7 +409,7 @@ PRODUCT_COPY_FILES += \
 # libstdc++: camera.msm8998
 PRODUCT_PACKAGES += \
     libstdc++_vendor \
-    libgui_vendor
+    libgui_vendor:32
 
 # Wifi
 PRODUCT_COPY_FILES += \
