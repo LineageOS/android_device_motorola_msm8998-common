@@ -127,6 +127,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
 # GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0-impl-qti \
@@ -146,10 +149,6 @@ PRODUCT_PACKAGES += \
     lowi.conf \
     sap.conf \
     xtwifi.conf
-
-# GMS
-PRODUCT_GMS_CLIENTID_BASE := android-motorola
-WITH_GMS_FI := true
 
 # Health
 PRODUCT_PACKAGES += \
