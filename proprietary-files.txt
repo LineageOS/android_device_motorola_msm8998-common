@@ -392,8 +392,10 @@ product/etc/permissions/com.motorola.motodisplay.xml
 system/etc/permissions/com.motorola.moto.xml:vendor/etc/permissions/com.motorola.moto.xml|ae00f0eb4b1e134e0f6f25586ec70f6faa00a528
 vendor/etc/permissions/com.motorola.camera2.xml|6d77e9310c6647cda3c35f64097a14a1bda798d3
 
-# Offmode charging
-vendor/bin/charge_only_mode|7abae0e894fd36fd10795099b4a5025df2c1e817|0ba9713157beb424eef3e9af721374e18c88bd89
+# Offmode charging - from nash_retail (PPX29.159-24)
+vendor/bin/charge_only_mode|54713d27fb286652b90f737321bb8485f25bc18e|207def212d24df61c1273604cf0bbfa417795d14
+
+# Offmode charging - Dependencies
 vendor/bin/hvdcp_opti
 
 # Perf
