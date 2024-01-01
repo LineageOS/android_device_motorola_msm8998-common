@@ -94,6 +94,30 @@
       },
       "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33bf822b_2ce54b1c",
+        "filename": "common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2024-01-01T22:43:11Z",
+      "side": 0,
+      "message": "Some commits with same change-id also mention that this is built by IPACM. And looks like inddeed it is:\n\nhttps://github.com/LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr/blob/3c0a7c4a067323d92e1091429e5f6bb6e099473f/ipacm/Android.bp#L48",
+      "parentUuid": "2a5ccd4e_7d212a13",
+      "range": {
+        "startLine": 82,
+        "startChar": 4,
+        "endLine": 82,
+        "endChar": 13
+      },
+      "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
