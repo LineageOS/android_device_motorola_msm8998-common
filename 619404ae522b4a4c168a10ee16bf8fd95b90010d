@@ -46,6 +46,30 @@
       },
       "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "77a8696d_0e0c70c2",
+        "filename": "common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2024-01-01T20:48:02Z",
+      "side": 0,
+      "message": "BTW. this doesn\u0027t need to block the whole chain, we can leave this for later when someone has time to double check on another device",
+      "parentUuid": "63087614_8940581e",
+      "range": {
+        "startLine": 82,
+        "startChar": 4,
+        "endLine": 82,
+        "endChar": 13
+      },
+      "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
