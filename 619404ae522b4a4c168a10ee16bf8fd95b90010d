@@ -70,6 +70,30 @@
       },
       "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a5ccd4e_7d212a13",
+        "filename": "common.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 20370
+      },
+      "writtenOn": "2024-01-01T22:00:48Z",
+      "side": 0,
+      "message": "Afaics libxml2 should be build by this dependency chain:\n\nandroid.hardware.bluetooth.audio-impl: https://github.com/LineageOS/android_device_motorola_msm8998-common/blob/lineage-21/common.mk#L66\n\nlibbluetooth_audio_session_aidl: https://github.com/LineageOS/android_hardware_interfaces/blob/lineage-21.0/bluetooth/audio/aidl/default/Android.bp#L33\n\nlibxml2: https://github.com/LineageOS/android_hardware_interfaces/blob/lineage-21.0/bluetooth/audio/utils/Android.bp#L61",
+      "parentUuid": "77a8696d_0e0c70c2",
+      "range": {
+        "startLine": 82,
+        "startChar": 4,
+        "endLine": 82,
+        "endChar": 13
+      },
+      "revId": "619404ae522b4a4c168a10ee16bf8fd95b90010d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
