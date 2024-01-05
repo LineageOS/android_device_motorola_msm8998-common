@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2780c593_913828db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 31890
+      },
+      "writtenOn": "2024-01-05T09:59:16Z",
+      "side": 1,
+      "message": "I might be wrong, but iirc this issue was related to IPACM in T bringup and this was just temporary workaround. I would personally investigate it further.",
+      "revId": "7d63b8ab2da35382b1a9111cd938ac6e38ecd190",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
