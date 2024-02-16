@@ -109,6 +109,9 @@ vendor.gralloc.enable_fb_ubwc=1
 # Factory reset partition
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# IMS
+ro.vendor.radio.ims_version=AT3.1_IR92_V10.0
+
 # OEM Unlock reporting
 ro.oem_unlock_supported=1
 
