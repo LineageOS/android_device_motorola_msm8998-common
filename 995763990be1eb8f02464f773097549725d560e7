@@ -16,6 +16,24 @@
       "message": "Are you sure you need this? Nolen told me that this did the job on moto msm8998 devices: https://review.lineageos.org/c/LineageOS/android_device_motorola_msm8998-common/+/380833",
       "revId": "995763990be1eb8f02464f773097549725d560e7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ef960ce_7129f555",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-03-03T16:06:22Z",
+      "side": 1,
+      "message": "I have a payton user saying he was getting an exclamation mark still, but I can double check with him  on which build he is on",
+      "parentUuid": "bd24d682_069264f9",
+      "revId": "995763990be1eb8f02464f773097549725d560e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
