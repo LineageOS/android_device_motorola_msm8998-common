@@ -51,6 +51,23 @@
       "message": "see above. whoever had it, exclamation marks can happen for various other reasons too...",
       "revId": "995763990be1eb8f02464f773097549725d560e7",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "542a605f_9eeeee26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-03-04T04:04:36Z",
+      "side": 1,
+      "message": "I just tried with the latest official payton build and I get the exclamation mark yet I have mobile data\n\nhttps://i.imgur.com/B9ydmKM.png\n\nIf this doesn\u0027t apply to other msm8998 devices, I\u0027ll cherry pick for payton. our RIL stack is older",
+      "revId": "995763990be1eb8f02464f773097549725d560e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
