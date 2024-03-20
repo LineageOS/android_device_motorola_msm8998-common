@@ -14,18 +14,9 @@
 // limitations under the License.
 //
 
-motorola_msm8998_init_library_static {
+cc_library_static {
     name: "libinit_msm8998",
     recovery_available: true,
-    srcs: [
-        "init_msm8998.cpp",
-        "DeviceLibinit.cpp"
-    ],
-    include_dirs: [
-        "system/core/init",
-        "device/motorola/msm8998-common"
-    ],
-    shared_libs: [
-        "libbase",
-    ]
+    shared_libs: ["libbase"],
+    srcs: ["init_msm8998.cpp"],
 }
