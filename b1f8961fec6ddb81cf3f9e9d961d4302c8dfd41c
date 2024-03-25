@@ -16,6 +16,23 @@
       "message": "This fixed offline charging animation on payton",
       "revId": "b1f8961fec6ddb81cf3f9e9d961d4302c8dfd41c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d0f7645_086c0066",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 20370
+      },
+      "writtenOn": "2024-03-25T06:56:53Z",
+      "side": 1,
+      "message": "Can confirm that offline charging animation is fixed on payton, thanks!\nDuring online charging the fast charge mode is still being detected.",
+      "revId": "b1f8961fec6ddb81cf3f9e9d961d4302c8dfd41c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
