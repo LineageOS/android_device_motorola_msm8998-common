@@ -777,6 +777,9 @@ on property:persist.vendor.sys.rawdump_copy=1
 on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
 
+on property:init.svc.vendor.qcrild=stopped
+    stop vendor.radio-config-1-1-wrapper
+
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     # Enable ZRAM on boot_complete

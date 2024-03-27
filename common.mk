@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -321,6 +321,12 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.radio.c_shim@1.0 \
+    android.hardware.radio.c_shim@1.1 \
+    android.hardware.radio.c_shim@1.2 \
+    android.hardware.radio.config@1.1-service.wrapper
 
 # Recovery
 PRODUCT_COPY_FILES += \

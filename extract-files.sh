@@ -86,10 +86,14 @@ function blob_fixup() {
         vendor/lib64/libmdmcutback.so)
              "${PATCHELF}" --replace-needed "libqsap_sdk.so" "libqsap_shim.so" "${2}"
             ;;
-        # Fix missing symbols
         vendor/lib64/libril-qc-hal-qmi.so)
+        # Fix missing symbols
             for  LIBCUTILS_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
+            done
+        # Use lineage radio config wrapper
+            for v in 1.{0..2}; do
+                sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
             done
             ;;
     esac
