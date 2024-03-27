@@ -554,7 +554,7 @@ vendor/lib64/libqmimotext.so
 -vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libril-qc-hal-qmi.so|8c034c39340febfd18167c7a9dc9a6ee3a23f5c4|1d49eea411e9e50c2670415fe4e3ab198b4f9203
+vendor/lib64/libril-qc-hal-qmi.so|8c034c39340febfd18167c7a9dc9a6ee3a23f5c4|bb09c41405770584087488b74f3dd89acf120ebd
 vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so

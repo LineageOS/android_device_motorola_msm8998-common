@@ -142,7 +142,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.radio.config</name>
+        <name>lineage.hardware.radio.config</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
