@@ -98,6 +98,10 @@ vendor.video.disable.ubwc=1
 # Color Mode
 vendor.display.enable_default_color_mode=1
 
+# Data modules
+persist.vendor.data.iwlan.enable=true
+persist.vendor.data.mode=concurrent
+
 # Display
 debug.renderengine.backend=skiaglthreaded
 dev.pm.dyn_samplingrate=1
@@ -167,7 +171,6 @@ ro.telephony.default_network=10,10
 ro.vendor.build.vendorprefix=/vendor
 ro.vendor.telephony.default_network=10,10
 ro.vendor.use_data_netmgrd=true
-vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 # Sensors
 ro.vendor.sensors.smd=false

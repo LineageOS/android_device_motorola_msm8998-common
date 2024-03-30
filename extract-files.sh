@@ -69,15 +69,17 @@ function blob_fixup() {
             for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
             done
+            for LIBUI_SHIM in $(grep -L "libui_shim.so" "${2}"); do
+                "${PATCHELF}" --add-needed "libui_shim.so" "${LIBUI_SHIM}"
+            done
+            "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
+
             ;;
         # memset shim
         vendor/bin/charge_only_mode)
             for  LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
             done
-            ;;
-        vendor/bin/pm-service)
-            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
         # Fix missing symbols
         vendor/lib/libmot_gpu_mapper.so)

@@ -264,8 +264,6 @@ on boot
     mkdir /mnt/vendor/persist/iar_db 0770 system system
     mkdir /mnt/vendor/spunvm 0770 system system
 
-    #Create NETMGR daemon socket area
-    mkdir /dev/socket/netmgr 0750 radio radio
     #Create WIGIG socket area
     mkdir /dev/socket/wigig 0770 wifi wifi
 
@@ -275,11 +273,6 @@ on boot
     setprop persist.camera.gyro.disable 0
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
-
-#   Assign TCP buffer thresholds to be ceiling value of technology maximums
-#   Increased technology maximums should be reflected here.
-    write /proc/sys/net/core/rmem_max  134217728
-    write /proc/sys/net/core/wmem_max  134217728
 
 #   Assign UDP default read buffer to get expected UDP data throughput
     write /proc/sys/net/ipv4/udp_rmem_min 10240
@@ -400,9 +393,6 @@ on boot
     chown system system /mnt/vendor/persist/chargeonly/cooldown
     chmod 0660 /mnt/vendor/persist/chargeonly/cooldown
 
-    start vendor.rmt_storage
-    start rfs_access
-
     ####Regionalization config and prop files####
     chmod 0644 /mnt/vendor/persist/speccfg/spec
     chmod 0644 /mnt/vendor/persist/speccfg/devicetype
@@ -428,6 +418,9 @@ on boot
     #sensors log dir
     mkdir /data/vendor/sensors
     chown system system /data/vendor/sensors
+
+    start vendor.qcrild
+    start vendor.qcrild2
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -829,16 +822,6 @@ service vendor.irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service vendor.rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    shutdown critical
-    ioprio rt 0
-
-service vendor.tftp_server /vendor/bin/tftp_server
-    class core
-    user root
-
 #service vendor.bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
 #    class late_start
 #    user bluetooth
@@ -1007,20 +990,6 @@ service vendor.wigig_hostapd /vendor/bin/hw/hostapd -dd  -j wigighostapd /data/v
     group wifi inet keystore
     oneshot
     disabled
-
-service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
-    class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
-
-service vendor.ril-daemon3 /vendor/bin/hw/rild -c 3
-    class main
-    user radio
-    disabled
-    group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
-    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
