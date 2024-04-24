@@ -46,7 +46,11 @@ GnssBatching::GnssBatching() : mApi(nullptr) {
 
 GnssBatching::~GnssBatching() {
     if (mApi != nullptr) {
+<<<<<<< HEAD
         delete mApi;
+=======
+        mApi->destroy();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         mApi = nullptr;
     }
 }
@@ -56,7 +60,11 @@ GnssBatching::~GnssBatching() {
 Return<bool> GnssBatching::init(const sp<IGnssBatchingCallback>& callback) {
     if (mApi != nullptr) {
         LOC_LOGD("%s]: mApi is NOT nullptr, delete it first", __FUNCTION__);
+<<<<<<< HEAD
         delete mApi;
+=======
+        mApi->destroy();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         mApi = nullptr;
     }
 

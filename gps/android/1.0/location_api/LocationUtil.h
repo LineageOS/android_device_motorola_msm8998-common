@@ -43,6 +43,11 @@ namespace implementation {
 void convertGnssLocation(Location& in, V1_0::GnssLocation& out);
 void convertGnssLocation(const V1_0::GnssLocation& in, Location& out);
 void convertGnssConstellationType(GnssSvType& in, V1_0::GnssConstellationType& out);
+<<<<<<< HEAD
+=======
+void convertGnssSvid(GnssSv& in, int16_t& out);
+void convertGnssSvid(GnssMeasurementsData& in, int16_t& out);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 void convertGnssEphemerisType(GnssEphemerisType& in, GnssDebug::SatelliteEphemerisType& out);
 void convertGnssEphemerisSource(GnssEphemerisSource& in, GnssDebug::SatelliteEphemerisSource& out);
 void convertGnssEphemerisHealth(GnssEphemerisHealth& in, GnssDebug::SatelliteEphemerisHealth& out);

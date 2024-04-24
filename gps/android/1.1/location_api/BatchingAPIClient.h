@@ -46,7 +46,10 @@ class BatchingAPIClient : public LocationAPIClientBase
 {
 public:
     BatchingAPIClient(const sp<V1_0::IGnssBatchingCallback>& callback);
+<<<<<<< HEAD
     ~BatchingAPIClient();
+=======
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     int getBatchSize();
     int startSession(const V1_0::IGnssBatching::Options& options);
     int updateSessionOptions(const V1_0::IGnssBatching::Options& options);
@@ -61,6 +64,11 @@ public:
     void onBatchingCb(size_t count, Location* location, BatchingOptions batchOptions) final;
 
 private:
+<<<<<<< HEAD
+=======
+    ~BatchingAPIClient();
+
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     sp<V1_0::IGnssBatchingCallback> mGnssBatchingCbIface;
     uint32_t mDefaultId;
     LocationCapabilitiesMask mLocationCapabilitiesMask;

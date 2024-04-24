@@ -163,7 +163,11 @@ static void convertGnssMeasurement(GnssMeasurementsData& in,
         out.flags |= IGnssMeasurementCallback::GnssMeasurementFlags::HAS_CARRIER_PHASE_UNCERTAINTY;
     if (in.flags & GNSS_MEASUREMENTS_DATA_AUTOMATIC_GAIN_CONTROL_BIT)
         out.flags |= IGnssMeasurementCallback::GnssMeasurementFlags::HAS_AUTOMATIC_GAIN_CONTROL;
+<<<<<<< HEAD
     out.svid = in.svId;
+=======
+    convertGnssSvid(in, out.svid);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     convertGnssConstellationType(in.svType, out.constellation);
     out.timeOffsetNs = in.timeOffsetNs;
     if (in.stateMask & GNSS_MEASUREMENTS_STATE_CODE_LOCK_BIT)

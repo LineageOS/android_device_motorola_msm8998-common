@@ -30,6 +30,10 @@
 #define LOG_NDEBUG 0
 #define LOG_TAG "LocSvc_BatchingAPIClient"
 
+<<<<<<< HEAD
+=======
+#include <inttypes.h>
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 #include <log_util.h>
 #include <loc_cfg.h>
 
@@ -153,7 +157,11 @@ void BatchingAPIClient::flushBatchedLocations()
 
 void BatchingAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
 {
+<<<<<<< HEAD
     LOC_LOGD("%s]: (%02x)", __FUNCTION__, capabilitiesMask);
+=======
+    LOC_LOGD("%s]: (%" PRIu64 ")", __FUNCTION__, capabilitiesMask);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     mLocationCapabilitiesMask = capabilitiesMask;
 }
 

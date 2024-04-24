@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
+=======
+/* Copyright (c) 2017-2020, The Linux Foundation. All rights reserved.
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -31,6 +35,10 @@
 #define LOG_TAG "LocSvc_GnssAPIClient"
 #define SINGLE_SHOT_MIN_TRACKING_INTERVAL_MSEC (590 * 60 * 60 * 1000) // 590 hours
 
+<<<<<<< HEAD
+=======
+#include <inttypes.h>
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 #include <log_util.h>
 #include <loc_cfg.h>
 
@@ -110,9 +118,13 @@ void GnssAPIClient::gnssUpdateCallbacks(const sp<IGnssCallback>& gpsCb,
 
     locationCallbacks.gnssNiCb = nullptr;
     loc_core::ContextBase* context =
+<<<<<<< HEAD
             loc_core::LocContext::getLocContext(
                     NULL, NULL,
                     loc_core::LocContext::mLocationHalName, false);
+=======
+            loc_core::LocContext::getLocContext(loc_core::LocContext::mLocationHalName);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     if (mGnssNiCbIface != nullptr && !context->hasAgpsExtendedCapabilities()) {
         LOC_LOGD("Registering NI CB");
         locationCallbacks.gnssNiCb = [this](uint32_t id, GnssNiNotification gnssNiNotification) {
@@ -174,7 +186,10 @@ bool GnssAPIClient::gnssSetPositionMode(IGnss::GnssPositionMode mode,
         // For MSA, we always treat it as SINGLE mode.
         mTrackingOptions.minInterval = SINGLE_SHOT_MIN_TRACKING_INTERVAL_MSEC;
     }
+<<<<<<< HEAD
     mTrackingOptions.minDistance = preferredAccuracyMeters;
+=======
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     if (mode == IGnss::GnssPositionMode::STANDALONE)
         mTrackingOptions.mode = GNSS_SUPL_MODE_STANDALONE;
     else if (mode == IGnss::GnssPositionMode::MS_BASED)
@@ -302,7 +317,11 @@ void GnssAPIClient::requestCapabilities() {
 // callbacks
 void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
 {
+<<<<<<< HEAD
     LOC_LOGD("%s]: (%02x)", __FUNCTION__, capabilitiesMask);
+=======
+    LOC_LOGD("%s]: (%" PRIu64 ")", __FUNCTION__, capabilitiesMask);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     mLocationCapabilitiesMask = capabilitiesMask;
     mLocationCapabilitiesCached = true;
 
@@ -332,6 +351,7 @@ void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
         }
     }
     if (gnssCbIface != nullptr) {
+<<<<<<< HEAD
         IGnssCallback::GnssSystemInfo gnssInfo;
         if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
             capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
@@ -342,6 +362,19 @@ void GnssAPIClient::onCapabilitiesCb(LocationCapabilitiesMask capabilitiesMask)
             gnssInfo.yearOfHw = 2016;
         } else {
             gnssInfo.yearOfHw = 2015;
+=======
+        IGnssCallback::GnssSystemInfo gnssInfo = { .yearOfHw = 2015 };
+
+        if (capabilitiesMask & LOCATION_CAPABILITIES_GNSS_MEASUREMENTS_BIT) {
+            gnssInfo.yearOfHw++; // 2016
+            if (capabilitiesMask & LOCATION_CAPABILITIES_DEBUG_NMEA_BIT) {
+                gnssInfo.yearOfHw++; // 2017
+                if (capabilitiesMask & LOCATION_CAPABILITIES_CONSTELLATION_ENABLEMENT_BIT ||
+                    capabilitiesMask & LOCATION_CAPABILITIES_AGPM_BIT) {
+                    gnssInfo.yearOfHw++; // 2018
+                }
+            }
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         }
         LOC_LOGV("%s:%d] set_system_info_cb (%d)", __FUNCTION__, __LINE__, gnssInfo.yearOfHw);
         auto r = gnssCbIface->gnssSetSystemInfoCb(gnssInfo);
@@ -541,7 +574,11 @@ static void convertGnssSvStatus(GnssSvNotification& in, IGnssCallback::GnssSvSta
     }
     for (size_t i = 0; i < out.numSvs; i++) {
         IGnssCallback::GnssSvInfo& info = out.gnssSvList[i];
+<<<<<<< HEAD
         info.svid = in.gnssSvs[i].svId;
+=======
+        convertGnssSvid(in.gnssSvs[i], info.svid);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         convertGnssConstellationType(in.gnssSvs[i].type, info.constellation);
         info.cN0Dbhz = in.gnssSvs[i].cN0Dbhz;
         info.elevationDegrees = in.gnssSvs[i].elevation;

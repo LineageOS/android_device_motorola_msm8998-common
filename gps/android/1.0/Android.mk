@@ -2,6 +2,12 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-impl-qti
+<<<<<<< HEAD
+=======
+
+# activate the following line for debug purposes only, comment out for production
+#LOCAL_SANITIZE_DIAG += $(GNSS_SANITIZE_DIAG)
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := \
@@ -55,6 +61,12 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.gnss@1.0-service-qti
+<<<<<<< HEAD
+=======
+
+# activate the following line for debug purposes only, comment out for production
+#LOCAL_SANITIZE_DIAG += $(GNSS_SANITIZE_DIAG)
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 LOCAL_VINTF_FRAGMENTS := android.hardware.gnss@1.0-service-qti.xml
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_RELATIVE_PATH := hw

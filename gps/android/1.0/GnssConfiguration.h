@@ -53,7 +53,11 @@ struct GnssConfiguration : public IGnssConfiguration {
     Return<bool> setSuplVersion(uint32_t version) override;
     Return<bool> setSuplMode(uint8_t mode) override;
     Return<bool> setSuplEs(bool enabled) override;
+<<<<<<< HEAD
     Return<bool> setLppProfile(uint8_t lppProfile) override;
+=======
+    Return<bool> setLppProfile(uint8_t lppProfileMask) override;
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     Return<bool> setGlonassPositioningProtocol(uint8_t protocol) override;
     Return<bool> setEmergencySuplPdn(bool enable) override;
     Return<bool> setGpsLock(uint8_t lock) override;

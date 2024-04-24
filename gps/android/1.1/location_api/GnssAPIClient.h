@@ -50,7 +50,10 @@ class GnssAPIClient : public LocationAPIClientBase
 public:
     GnssAPIClient(const sp<V1_0::IGnssCallback>& gpsCb,
             const sp<V1_0::IGnssNiCallback>& niCb);
+<<<<<<< HEAD
     virtual ~GnssAPIClient();
+=======
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     GnssAPIClient(const GnssAPIClient&) = delete;
     GnssAPIClient& operator=(const GnssAPIClient&) = delete;
 
@@ -92,6 +95,11 @@ public:
     void onStopTrackingCb(LocationError error) final;
 
 private:
+<<<<<<< HEAD
+=======
+    virtual ~GnssAPIClient();
+
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     sp<V1_0::IGnssCallback> mGnssCbIface;
     sp<V1_0::IGnssNiCallback> mGnssNiCbIface;
     std::mutex mMutex;

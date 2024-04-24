@@ -147,6 +147,77 @@ void convertGnssConstellationType(GnssSvType& in, GnssConstellationType& out)
     }
 }
 
+<<<<<<< HEAD
+=======
+void convertGnssSvid(GnssSv& in, int16_t& out)
+{
+    switch(in.type){
+        case GNSS_SV_TYPE_GPS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_SBAS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_GLONASS:
+            if (!isGloSlotUnknown(in.svId)) { // OSN is known
+                out = in.svId - GLO_SV_PRN_MIN + 1;
+            } else { //OSN is not known, report FCN
+                out = in.gloFrequency + 92;
+            }
+            break;
+        case GNSS_SV_TYPE_QZSS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_BEIDOU:
+            out = in.svId - BDS_SV_PRN_MIN + 1;
+            break;
+        case GNSS_SV_TYPE_GALILEO:
+            out = in.svId - GAL_SV_PRN_MIN + 1;
+            break;
+        case GNSS_SV_TYPE_NAVIC:
+            out = in.svId - NAVIC_SV_PRN_MIN + 1;
+            break;
+        default:
+            out = in.svId;
+            break;
+    }
+}
+
+void convertGnssSvid(GnssMeasurementsData& in, int16_t& out)
+{
+    switch (in.svType) {
+        case GNSS_SV_TYPE_GPS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_SBAS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_GLONASS:
+            if (!isGloSlotUnknown(in.svId)) { // OSN is known
+                out = in.svId - GLO_SV_PRN_MIN + 1;
+            } else { // OSN is not known, report FCN
+                out = in.gloFrequency + 92;
+            }
+            break;
+        case GNSS_SV_TYPE_QZSS:
+            out = in.svId;
+            break;
+        case GNSS_SV_TYPE_BEIDOU:
+            out = in.svId - BDS_SV_PRN_MIN + 1;
+            break;
+        case GNSS_SV_TYPE_GALILEO:
+            out = in.svId - GAL_SV_PRN_MIN + 1;
+            break;
+        case GNSS_SV_TYPE_NAVIC:
+            out = in.svId - NAVIC_SV_PRN_MIN + 1;
+            break;
+        default:
+            out = in.svId;
+            break;
+    }
+}
+
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 void convertGnssEphemerisType(GnssEphemerisType& in, GnssDebug::SatelliteEphemerisType& out)
 {
     switch(in) {

@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+=======
+ * Copyright (c) 2017-2020, The Linux Foundation. All rights reserved.
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
  * Not a Contribution
  */
 /*
@@ -28,6 +32,10 @@
 #include "Gnss.h"
 #include <LocationUtil.h>
 #include "battery_listener.h"
+<<<<<<< HEAD
+=======
+#include "loc_misc_utils.h"
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 
 typedef const GnssInterface* (getLocationInterface)();
 
@@ -42,6 +50,10 @@ void Gnss::GnssDeathRecipient::serviceDied(uint64_t cookie, const wp<IBase>& who
     LOC_LOGE("%s] service died. cookie: %llu, who: %p",
             __FUNCTION__, static_cast<unsigned long long>(cookie), &who);
     if (mGnss != nullptr) {
+<<<<<<< HEAD
+=======
+        mGnss->getGnssInterface()->resetNetworkInfo();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         mGnss->stop();
         mGnss->cleanup();
     }
@@ -56,6 +68,11 @@ void location_on_battery_status_changed(bool charging) {
 Gnss::Gnss() {
     ENTRY_LOG_CALLFLOW();
     sGnss = this;
+<<<<<<< HEAD
+=======
+    // initilize gnss interface at first in case needing notify battery status
+    sGnss->getGnssInterface()->initialize();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     // register health client to listen on battery change
     loc_extn_battery_properties_listener_init(location_on_battery_status_changed);
     // clear pending GnssConfig
@@ -67,7 +84,11 @@ Gnss::Gnss() {
 Gnss::~Gnss() {
     ENTRY_LOG_CALLFLOW();
     if (mApi != nullptr) {
+<<<<<<< HEAD
         delete mApi;
+=======
+        mApi->destroy();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         mApi = nullptr;
     }
     sGnss = nullptr;
@@ -100,6 +121,7 @@ GnssAPIClient* Gnss::getApi() {
 const GnssInterface* Gnss::getGnssInterface() {
     static bool getGnssInterfaceFailed = false;
     if (nullptr == mGnssInterface && !getGnssInterfaceFailed) {
+<<<<<<< HEAD
         LOC_LOGD("%s]: loading libgnss.so::getGnssInterface ...", __func__);
         getLocationInterface* getter = NULL;
         const char *error = NULL;
@@ -116,6 +138,13 @@ const GnssInterface* Gnss::getGnssInterface() {
         }
 
         if (NULL == getter) {
+=======
+        void * libHandle = nullptr;
+        getLocationInterface* getter = (getLocationInterface*)
+                dlGetSymFromLib(libHandle, "libgnss.so", "getGnssInterface");
+
+        if (nullptr == getter) {
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
             getGnssInterfaceFailed = true;
         } else {
             mGnssInterface = (const GnssInterface*)(*getter)();
@@ -183,7 +212,11 @@ Return<bool> Gnss::updateConfiguration(GnssConfig& gnssConfig) {
         }
         if (gnssConfig.flags & GNSS_CONFIG_FLAGS_LPP_PROFILE_VALID_BIT) {
             mPendingConfig.flags |= GNSS_CONFIG_FLAGS_LPP_PROFILE_VALID_BIT;
+<<<<<<< HEAD
             mPendingConfig.lppProfile = gnssConfig.lppProfile;
+=======
+            mPendingConfig.lppProfileMask = gnssConfig.lppProfileMask;
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         }
         if (gnssConfig.flags & GNSS_CONFIG_FLAGS_LPPE_CONTROL_PLANE_VALID_BIT) {
             mPendingConfig.flags |= GNSS_CONFIG_FLAGS_LPPE_CONTROL_PLANE_VALID_BIT;
@@ -262,6 +295,7 @@ Return<bool> Gnss::injectLocation(double latitudeDegrees,
 
 Return<bool> Gnss::injectTime(int64_t timeMs, int64_t timeReferenceMs,
                               int32_t uncertaintyMs) {
+<<<<<<< HEAD
     ENTRY_LOG_CALLFLOW();
     const GnssInterface* gnssInterface = getGnssInterface();
     if (nullptr != gnssInterface) {
@@ -270,6 +304,9 @@ Return<bool> Gnss::injectTime(int64_t timeMs, int64_t timeReferenceMs,
     } else {
         return false;
     }
+=======
+    return true;
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 }
 
 Return<void> Gnss::deleteAidingData(V1_0::IGnss::GnssAidingData aidingDataFlags)  {

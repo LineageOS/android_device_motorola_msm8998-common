@@ -49,7 +49,10 @@ class MeasurementAPIClient : public LocationAPIClientBase
 {
 public:
     MeasurementAPIClient();
+<<<<<<< HEAD
     virtual ~MeasurementAPIClient();
+=======
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     MeasurementAPIClient(const MeasurementAPIClient&) = delete;
     MeasurementAPIClient& operator=(const MeasurementAPIClient&) = delete;
 
@@ -69,6 +72,11 @@ public:
     void onGnssMeasurementsCb(GnssMeasurementsNotification gnssMeasurementsNotification) final;
 
 private:
+<<<<<<< HEAD
+=======
+    virtual ~MeasurementAPIClient();
+
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     std::mutex mMutex;
     sp<V1_0::IGnssMeasurementCallback> mGnssMeasurementCbIface;
     sp<IGnssMeasurementCallback> mGnssMeasurementCbIface_1_1;

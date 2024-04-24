@@ -45,7 +45,11 @@ GnssGeofencing::GnssGeofencing() : mApi(nullptr) {
 
 GnssGeofencing::~GnssGeofencing() {
     if (mApi != nullptr) {
+<<<<<<< HEAD
         delete mApi;
+=======
+        mApi->destroy();
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
         mApi = nullptr;
     }
 }

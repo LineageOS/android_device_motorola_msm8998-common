@@ -54,6 +54,10 @@ Return<bool> AGnssRil::updateNetworkState(bool connected, NetworkType type, bool
     const int NetworkType_BLUETOOTH = 7;
     const int NetworkType_ETHERNET = 9;
     const int NetworkType_PROXY = 16;
+<<<<<<< HEAD
+=======
+    std::string apn("");
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
 
     // for XTRA
     if (nullptr != mGnss && ( nullptr != mGnss->getGnssInterface() )) {
@@ -102,7 +106,11 @@ Return<bool> AGnssRil::updateNetworkState(bool connected, NetworkType type, bool
                 }
                 break;
         }
+<<<<<<< HEAD
         mGnss->getGnssInterface()->updateConnectionStatus(connected, false, typeout, 0);
+=======
+        mGnss->getGnssInterface()->updateConnectionStatus(connected, typeout, false, 0, apn);
+>>>>>>> 8ca4b17a5 (msm8998-common: Import GNSS and location API from pro1)
     }
     return true;
 }
