@@ -340,7 +340,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.c_shim@1.0 \
     android.hardware.radio.c_shim@1.1 \
     android.hardware.radio.c_shim@1.2 \
-    android.hardware.radio.config@1.1-service.wrapper
+    android.hardware.radio.config@1.1-service.wrapper \
+    android.hardware.radio@1.4-service.legacy
 
 # Recovery
 PRODUCT_COPY_FILES += \
