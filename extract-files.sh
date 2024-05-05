@@ -60,9 +60,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        # Fix xml version
         system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+        # Fix xml version
             sed -i 's|xml version="2.0"|xml version="1.0"|g' "${2}"
+        # Move telephony packages to /system_ext
+            sed -i 's|product|system_ext|g' "${2}"
             ;;
         # Fix missing symbols
         system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so | system_ext/lib/lib-imscamera.so | system_ext/lib/lib-imsvideocodec.so)
@@ -94,6 +96,10 @@ function blob_fixup() {
             for  LIBCUTILS_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
                 "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBCUTILS_SHIM"
             done
+            ;;
+        system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml | system_ext/etc/permissions/qcrilhook.xml | system_ext/etc/permissions/telephonyservice.xml)
+        # Move telephony packages to /system_ext
+            sed -i 's|product|system_ext|g' "${2}"
             ;;
     esac
 }
