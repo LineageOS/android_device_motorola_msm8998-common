@@ -51,8 +51,8 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib/libmot_gpu_mapper.so|6e82d77ccba4938dc27790f410d04de61688c309|dad9b6f28f70d011484188c39077cf6a91cef5b5
 
 # CNE
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml|335d6da6763240d58a1598f95bed50bb80e3e71d|75e8a824d368cd4172985c884796381327d950da
-product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml|f21207db1805ec6ba512f526b795822794ff6274|620c9fa0047bb681e918af2d1e7a98c648f45fb7
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
+product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 product/framework/vendor.qti.data.factory-V1.0-java.jar:system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 product/framework/vendor.qti.data.factory-V2.0-java.jar:system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 product/framework/vendor.qti.hardware.data.connection-V1.0-java.jar:system_ext/framework/vendor.qti.hardware.data.connection-V1.0-java.jar
@@ -601,7 +601,7 @@ vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql
 vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 # Radio - IMS
-product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xm
+product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
 product/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar:system_ext/framework/com.qualcomm.qti.imscmservice-V2.0-java.jar
