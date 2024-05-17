@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c449271c_47a6b312",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-17T07:24:59Z",
+      "side": 1,
+      "message": "wip. works so far on payton. I\u0027m waiting for more user feedback before we should merge it to confirm IMS / VoLTE and such also work as I cannot test it...",
+      "revId": "e543daf63ad0b8bf4d973f640de15f9f2b5fde97",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
