@@ -33,7 +33,7 @@
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
 datamode=`getprop persist.vendor.data.mode`
-qcrild_status=false
+qcrild_status=true
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
@@ -45,11 +45,6 @@ esac
 
 case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
-
-    sku=`getprop ro.boot.product.hardware.sku`
-    if [ "$sku" = "qcril" ]; then
-        qcrild_status=true
-    fi
 
     if [ "$qcrild_status" = "true" ]; then
         # Make sure both rild, qcrild are not running at same time.
