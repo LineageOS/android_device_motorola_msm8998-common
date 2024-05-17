@@ -16,6 +16,23 @@
       "message": "wip",
       "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97d9dec0_8cbfae78",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-05-17T07:19:28Z",
+      "side": 1,
+      "message": "have you tried switching data sim from one to another?",
+      "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
