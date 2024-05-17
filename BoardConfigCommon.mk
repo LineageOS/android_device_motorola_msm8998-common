@@ -1,25 +1,7 @@
 #
 # Copyright (C) 2017-2024 The LineageOS Project
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
-#
-# This file sets variables that control the way modules are built
-# thorughout the system. It should not be used to conditionally
-# disable makefiles (the proper mechanism to control what gets
-# included in a build is to use PRODUCT_PACKAGES in a product
-# definition file).
+# SPDX-License-Identifier: Apache-2.0
 #
 
 PLATFORM_PATH := device/motorola/msm8998-common
@@ -123,8 +105,7 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
-ODM_MANIFEST_SKUS += qcril
-ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/odm_manifest_qcril.xml
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \
