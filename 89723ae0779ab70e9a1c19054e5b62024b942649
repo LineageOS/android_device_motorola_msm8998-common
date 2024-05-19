@@ -33,6 +33,24 @@
       "message": "have you tried switching data sim from one to another?",
       "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5ad27f5_931be8aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-19T22:10:14Z",
+      "side": 1,
+      "message": "tbh my payton is single sim and most users I\u0027ve talked to also have the same, so I\u0027m unsure how popular a dual sim variant is...\n\nbtw is there something I\u0027m potentially missing on this commit? I kept getting cannot find \"lineage.hardware.radio.config\" but I see the wrapper service is running and when I tried to manually stop and start it to see if logcat shows any changes it doesn\u0027t say why it keeps failing...",
+      "parentUuid": "97d9dec0_8cbfae78",
+      "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
