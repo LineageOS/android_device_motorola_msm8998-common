@@ -51,6 +51,24 @@
       "parentUuid": "97d9dec0_8cbfae78",
       "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55d2d954_f20a94a4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-05-20T06:42:08Z",
+      "side": 1,
+      "message": "`lineage.hardware.radio.config` should be registered by your stock RIL service, for the wrapper to use",
+      "parentUuid": "d5ad27f5_931be8aa",
+      "revId": "89723ae0779ab70e9a1c19054e5b62024b942649",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
