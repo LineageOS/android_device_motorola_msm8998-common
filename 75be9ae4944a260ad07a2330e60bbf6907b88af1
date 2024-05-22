@@ -16,6 +16,41 @@
       "message": "Still no luck for me... or does it only work on newer QCRIL blobs?\n\nhttps://gist.github.com/ThEMarD/38561de47d86cb0b2f82be3de02197ea",
       "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e062be42_c5dfd0a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-05-22T17:53:24Z",
+      "side": 1,
+      "message": "no, technically the wrapper should work for even non-qcom devices\n\nDid you confirm that:\n1. your qcrild services are running\n2. the blob edit has actually got applied on the built ROM",
+      "parentUuid": "a3f5fec0_bbe81fbc",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "199d9ec0_c273acad",
+        "filename": "manifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-05-22T17:53:24Z",
+      "side": 1,
+      "message": "you have 1.1 in common and 1.0 in payton dt at the same time?",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
