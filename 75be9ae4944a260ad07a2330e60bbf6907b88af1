@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a3f5fec0_bbe81fbc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-22T03:59:19Z",
+      "side": 1,
+      "message": "Still no luck for me... or does it only work on newer QCRIL blobs?\n\nhttps://gist.github.com/ThEMarD/38561de47d86cb0b2f82be3de02197ea",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
