@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "91a9dcd1_eefe29b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32245
+      },
+      "writtenOn": "2024-05-23T06:40:25Z",
+      "side": 1,
+      "message": "is `vendor.qcrild2` running too?",
+      "parentUuid": "360ada53_357f1b6e",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "199d9ec0_c273acad",
         "filename": "manifest.xml",
         "patchSetId": 2
