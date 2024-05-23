@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "360ada53_357f1b6e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-23T02:12:44Z",
+      "side": 1,
+      "message": "1. yep vendor.qcrild is running I checked props and it shows it is running and logcat too\n\n2. objdump -x out/target/product/payton/vendor/lib64/libril-qc-hal-qmi.so | grep NEEDED | grep android.hardware.radio.c\n  NEEDED               android.hardware.radio.c_shim@1.0.so\n  NEEDED               android.hardware.radio.c_shim@1.1.so\n  NEEDED               android.hardware.radio.c_shim@1.2.so\n\n\nJust incase it was maybe patchelf version for that needed libcutils shim on that same blob, I did try v0.17.2 and no luck there either... or is that shim somehow interrupting the wrapper shim?",
+      "parentUuid": "e062be42_c5dfd0a0",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "199d9ec0_c273acad",
         "filename": "manifest.xml",
         "patchSetId": 2
@@ -49,6 +67,24 @@
       "writtenOn": "2024-05-22T17:53:24Z",
       "side": 1,
       "message": "you have 1.1 in common and 1.0 in payton dt at the same time?",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "546d1c95_70798e46",
+        "filename": "manifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-23T02:12:44Z",
+      "side": 1,
+      "message": "on Payton it\u0027s an override as it\u0027s the only moto msm8998-common device that needs 1.0\n\nI checked the out/target/product/payton/vendor/etc/vintf/manifest.xml and indeed it shows lineage.hardware.radio.config fqname is 1.0 and not 1.1 like in common tree\n\ncat out/target/product/payton/vendor/etc/vintf/manifest.xml | grep radio.config\n        \u003cname\u003elineage.hardware.radio.config\u003c/name\u003e\n\ncat out/target/product/payton/vendor/etc/vintf/manifest.xml | grep IRadioConfig\n        \u003cfqname\u003e@1.0::IRadioConfig/default\u003c/fqname\u003e",
+      "parentUuid": "199d9ec0_c273acad",
       "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
