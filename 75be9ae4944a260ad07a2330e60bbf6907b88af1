@@ -74,6 +74,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "37bbf951_ae559104",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2024-05-23T14:16:46Z",
+      "side": 1,
+      "message": "my payton variant is single sim and tbh the users who tested payton so far are also single sim, so I think DSDS versions are quite rare (if there even is any?)",
+      "parentUuid": "91a9dcd1_eefe29b6",
+      "revId": "75be9ae4944a260ad07a2330e60bbf6907b88af1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "199d9ec0_c273acad",
         "filename": "manifest.xml",
         "patchSetId": 2
