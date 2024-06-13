@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor \
+    libion.vendor
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
@@ -320,6 +321,7 @@ PRODUCT_PACKAGES += \
 # Radio
 PRODUCT_PACKAGES += \
     librmnetctl
+    libsqlite.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
