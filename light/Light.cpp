@@ -117,7 +117,7 @@ static void handleNotification(const LightState& state) {
     /*
      * Scale brightness if the Alpha brightness is not 0xFF.
      */
-    if (alpha != 0xFF)
+    if (alpha > 0 && alpha < 255)
         brightness = (brightness * alpha) / 0xFF;
 
     /* Check if path is accessible, if not, use alternative */
