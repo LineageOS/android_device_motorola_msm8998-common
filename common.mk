@@ -112,7 +112,8 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.2.vendor
+    android.hardware.drm@1.2.vendor \
+    libhidlmemory.vendor
 
 # Fingerprint
 PRODUCT_PACKAGES += \
