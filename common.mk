@@ -37,6 +37,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Audio
+# Note: Audio/Effects MUST be v4, v5/v6 cause crashes in lake/evert/beckham prebuilt HALs
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.service \
