@@ -1,5 +1,5 @@
 #
-# Copyright 2014 The Android Open Source Project
+# Copyright (C) 2017-2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -69,14 +69,5 @@ $(DSP_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/dsp $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(DSP_SYMLINK)
-
-WCNSS_MAC_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin
-$(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "WCNSS MAC bin link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /persist/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_MAC_SYMLINK)
 
 endif
