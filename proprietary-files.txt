@@ -639,8 +639,8 @@ product/lib64/com.qualcomm.qti.imscmservice@2.1.so:system_ext/lib64/com.qualcomm
 product/lib64/com.qualcomm.qti.imscmservice@2.2.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
 product/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
 product/lib64/com.qualcomm.qti.uceservice@2.1.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
-product/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so|4f853b6bffc87f17444e7afa001a0a132bbd384e|801874f74634f44954cad54f1b1c456fd8dd86c7
-product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so|47e30b2753fe5a340fe7a443fc3b3de5207a39b8|e8c80fdb476b1cab1573719a845ea91bea069925
+product/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|4f853b6bffc87f17444e7afa001a0a132bbd384e|801874f74634f44954cad54f1b1c456fd8dd86c7
+product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|47e30b2753fe5a340fe7a443fc3b3de5207a39b8|e8c80fdb476b1cab1573719a845ea91bea069925
 product/lib64/lib-imsvt.so:system_ext/lib64/lib-imsvt.so
 product/lib64/lib-imsvtextutils.so:system_ext/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvtutils.so:system_ext/lib64/lib-imsvtutils.so

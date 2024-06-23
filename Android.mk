@@ -70,16 +70,6 @@ $(DSP_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(DSP_SYMLINK)
 
-IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
-$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "IMS lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system/system_ext/lib64/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
-
 WCNSS_MAC_SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin
 $(WCNSS_MAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "WCNSS MAC bin link: $@"
