@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9092efbd_7c22034e",
+        "filename": "Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2024-06-23T18:48:31Z",
+      "side": 0,
+      "message": "FYI this needs to be added on motorola devices",
+      "range": {
+        "startLine": 111,
+        "startChar": 1,
+        "endLine": 111,
+        "endChar": 33
+      },
+      "revId": "c15cc7e0a23ca339850fb42afec4bf5573fdf7e1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
