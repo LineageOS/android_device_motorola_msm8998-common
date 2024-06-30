@@ -188,15 +188,15 @@ vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # FM
--product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
--product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so
-system/lib/fm_helium.so:system_ext/lib/fm_helium.so
-system/lib/libfm-hci.so:system_ext/lib/libfm-hci.so
-system/lib64/fm_helium.so:system_ext/lib64/fm_helium.so
-system/lib64/libfm-hci.so:system_ext/lib64/libfm-hci.so
-vendor/bin/fm_qsoc_patches
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+#-product/lib/vendor.qti.hardware.fm@1.0.so:system_ext/lib/vendor.qti.hardware.fm@1.0.so
+#-product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+#system/lib/fm_helium.so:system_ext/lib/fm_helium.so
+#system/lib/libfm-hci.so:system_ext/lib/libfm-hci.so
+#system/lib64/fm_helium.so:system_ext/lib64/fm_helium.so
+#system/lib64/libfm-hci.so:system_ext/lib64/libfm-hci.so
+#vendor/bin/fm_qsoc_patches
+#vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+#vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # GPS
 vendor/bin/garden_app
@@ -249,7 +249,7 @@ vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/vulkan.sdm660.so
+#vendor/lib/hw/vulkan.sdm660.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
@@ -280,7 +280,7 @@ vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.sdm660.so
+#vendor/lib64/hw/vulkan.sdm660.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
@@ -388,7 +388,7 @@ vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal_proprietary.so
 
 # Moto Permissions
-product/etc/permissions/com.motorola.motodisplay.xml
+#product/etc/permissions/com.motorola.motodisplay.xml
 system/etc/permissions/com.motorola.moto.xml:vendor/etc/permissions/com.motorola.moto.xml|ae00f0eb4b1e134e0f6f25586ec70f6faa00a528
 vendor/etc/permissions/com.motorola.camera2.xml|6d77e9310c6647cda3c35f64097a14a1bda798d3
 
@@ -480,7 +480,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 
 # Radio
-product/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 product/etc/permissions/qcrilhook.xml:system_ext/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml:system_ext/etc/permissions/telephonyservice.xml
 product/framework/QtiTelephonyServicelibrary.jar:system_ext/framework/QtiTelephonyServicelibrary.jar
@@ -605,6 +604,7 @@ vendor/lib64/deviceInfoServiceModule.so|c7d4021528f3a43320d0f109a9ed5f765a6a92a2
 vendor/lib64/libril-qc-logger.so|2cb2bdeed66f69753cca01bc66a1deb3ed51a2a9
 
 # Radio - IMS
+product/app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml:system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
@@ -639,14 +639,14 @@ product/lib64/com.qualcomm.qti.imscmservice@2.1.so:system_ext/lib64/com.qualcomm
 product/lib64/com.qualcomm.qti.imscmservice@2.2.so:system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
 product/lib64/com.qualcomm.qti.uceservice@2.0.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
 product/lib64/com.qualcomm.qti.uceservice@2.1.so:system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
-product/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so|4f853b6bffc87f17444e7afa001a0a132bbd384e|801874f74634f44954cad54f1b1c456fd8dd86c7
-product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|47e30b2753fe5a340fe7a443fc3b3de5207a39b8|e8c80fdb476b1cab1573719a845ea91bea069925
+product/lib64/lib-imscamera.so:system_ext/lib64/lib-imscamera.so;|4f853b6bffc87f17444e7afa001a0a132bbd384e|801874f74634f44954cad54f1b1c456fd8dd86c7
+product/lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so|47e30b2753fe5a340fe7a443fc3b3de5207a39b8|e8c80fdb476b1cab1573719a845ea91bea069925
 product/lib64/lib-imsvt.so:system_ext/lib64/lib-imsvt.so
 product/lib64/lib-imsvtextutils.so:system_ext/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvtutils.so:system_ext/lib64/lib-imsvtutils.so
 product/lib64/libdiag_system.so:system_ext/lib64/libdiag_system.so
-product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so
-product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so
+product/lib64/libimscamera_jni.so:system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+product/lib64/libimsmedia_jni.so:system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 product/lib64/vendor.qti.ims.callinfo@1.0.so:system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
 product/lib64/vendor.qti.ims.rcsconfig@1.0.so:system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so:system_ext/lib64/vendor.qti.imsrtpservice@2.0.so
@@ -712,14 +712,10 @@ vendor/lib/libsensor1.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
 vendor/lib/sensor_calibrate.so
-vendor/lib/sensors.rp.so
-vendor/lib/sensors.rp.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
-vendor/lib64/sensors.rp.so
-vendor/lib64/sensors.rp.so
 
 # Thermal
 vendor/bin/thermal-engine
