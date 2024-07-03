@@ -128,12 +128,12 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
 # DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
-vendor/lib/mediadrm/libwvdrmengine.so
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada017fc09af151e299db651d5
+vendor/lib/mediadrm/libwvdrmengine.so|4e65fa3c2919ccaf9d9c02a21e7f4667a86cefc8
 vendor/lib64/libcpion.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+vendor/lib64/libwvhidl.so|4dbc92f33b21e0fb6f6b952442e318beaf8a7ff0
+vendor/lib64/mediadrm/libwvdrmengine.so|8f739ef80cb780bf4794a27f76948b87ab7f00cc
 
 # DSP
 vendor/lib/libsdsprpc.so
@@ -202,7 +202,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
-vendor/bin/slim_daemon
+vendor/bin/slim_daemon|4b3b1dbbd23d1f6fc16b971ddf346dab7d068a23
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
@@ -548,7 +548,7 @@ vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
-vendor/lib64/libqcrilFramework.so
+vendor/lib64/libqcrilFramework.so|8c0d84a7acfbb3b1ca1df075063b7b0fb765ca60
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqmimotext.so
 -vendor/lib64/libqmiservices.so
@@ -563,8 +563,8 @@ vendor/lib64/librilqmiservices.so
 vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
 vendor/lib64/qcrild_librilutils.so
-vendor/lib64/qtibus.so
-vendor/lib64/qtimutex.so
+vendor/lib64/qtibus.so|a0df01b61344ab30ffa8849c324d253dbf3434d7
+vendor/lib64/qtimutex.so|fcdfa429a467827cc84cccf5cba2ec3206346717
 vendor/lib64/vendor.qti.hardware.radio.am@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so
@@ -667,11 +667,11 @@ vendor/lib/com.qualcomm.qti.uceservice@2.0.so
 vendor/lib/com.qualcomm.qti.uceservice@2.1.so
 vendor/lib/lib-imscmservice.so
 vendor/lib/lib-imsdpl.so
-vendor/lib/lib-imsqimf.so
+vendor/lib/lib-imsqimf.so|8ee83caa2d6d2f8a2198b3900fc12776a7978df4
 vendor/lib/lib-imsrcs-v2.so
 vendor/lib/lib-imsrcsbaseimpl.so
 vendor/lib/lib-imsvtcore.so
-vendor/lib/lib-imsxml.so
+vendor/lib/lib-imsxml.so|cb51822614af16b88358273ea94d6d7bca41c1ff
 vendor/lib/lib-rtpcommon.so
 vendor/lib/lib-rtpcore.so
 vendor/lib/lib-rtpsl.so
@@ -689,11 +689,11 @@ vendor/lib64/com.qualcomm.qti.uceservice@2.0.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.1.so
 vendor/lib64/lib-imscmservice.so
 vendor/lib64/lib-imsdpl.so
-vendor/lib64/lib-imsqimf.so
+vendor/lib64/lib-imsqimf.so|25af5719858f748fdc1722236368897ac6f171d1
 vendor/lib64/lib-imsrcs-v2.so
 vendor/lib64/lib-imsrcsbaseimpl.so
 vendor/lib64/lib-imsvtcore.so
-vendor/lib64/lib-imsxml.so
+vendor/lib64/lib-imsxml.so|6e621c25e8059d724efe6d9fb9a80901b3ed6d7a
 vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
 vendor/lib64/lib-rtpsl.so
@@ -707,7 +707,7 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # Sensors
-vendor/bin/sensors.qti
+vendor/bin/sensors.qti|af808dc043e7447a9236d6156a2ece2898ef08c2
 vendor/lib/libsensor1.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
