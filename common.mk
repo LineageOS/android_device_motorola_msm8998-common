@@ -107,7 +107,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     gralloc.$(TARGET_MOTO_PLATFORM) \
     hwcomposer.$(TARGET_MOTO_PLATFORM) \
-    memtrack.$(TARGET_MOTO_PLATFORM) \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan \
