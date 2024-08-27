@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -44,7 +44,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -62,38 +63,56 @@ function blob_fixup() {
     case "${1}" in
         system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
         # Fix xml version
+            [ "$2" = "" ] && return 0
             sed -i 's|xml version="2.0"|xml version="1.0"|g' "${2}"
         # Move telephony packages to /system_ext
+            [ "$2" = "" ] && return 0
             sed -i 's|product|system_ext|g' "${2}"
             ;;
         # Fix missing symbols
         system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so | system_ext/lib/lib-imscamera.so | system_ext/lib/lib-imsvideocodec.so)
+            [ "$2" = "" ] && return 0
             grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
             ;;
         # memset shim
         vendor/bin/charge_only_mode)
+            [ "$2" = "" ] && return 0
             grep -q "libmemset_shim.so" "${2}" || "${PATCHELF}" --add-needed "libmemset_shim.so" "${2}"
             ;;
         vendor/bin/pm-service)
+            [ "$2" = "" ] && return 0
             grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
             ;;
         # Fix missing symbols
         vendor/lib/libmot_gpu_mapper.so)
+            [ "$2" = "" ] && return 0
             grep -q "libgui_shim_vendor.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${2}"
             ;;
         # Load wrapped shim
         vendor/lib64/libmdmcutback.so)
+            [ "$2" = "" ] && return 0
              "${PATCHELF}" --replace-needed "libqsap_sdk.so" "libqsap_shim.so" "${2}"
             ;;
         # Fix missing symbols
         vendor/lib64/libril-qc-hal-qmi.so)
+            [ "$2" = "" ] && return 0
             grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
             ;;
         system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml | system_ext/etc/permissions/qcrilhook.xml | system_ext/etc/permissions/telephonyservice.xml)
         # Move telephony packages to /system_ext
+            [ "$2" = "" ] && return 0
             sed -i 's|product|system_ext|g' "${2}"
             ;;
+        *)
+            return 1
+            ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 if [ -z "${ONLY_TARGET}" ]; then
