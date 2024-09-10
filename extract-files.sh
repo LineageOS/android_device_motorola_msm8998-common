@@ -98,6 +98,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libcutils_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcutils_shim.so" "${2}"
             ;;
+        vendor/lib*/libwvhidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q libcrypto_shim.so "${2}" || "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
         system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml | system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml | system_ext/etc/permissions/qcrilhook.xml | system_ext/etc/permissions/telephonyservice.xml)
         # Move telephony packages to /system_ext
             [ "$2" = "" ] && return 0

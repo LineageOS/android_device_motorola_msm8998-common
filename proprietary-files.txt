@@ -132,7 +132,7 @@ vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|68767969f86126ada01
 vendor/lib/mediadrm/libwvdrmengine.so|4e65fa3c2919ccaf9d9c02a21e7f4667a86cefc8
 vendor/lib64/libcpion.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/libwvhidl.so|4dbc92f33b21e0fb6f6b952442e318beaf8a7ff0
+vendor/lib64/libwvhidl.so|4dbc92f33b21e0fb6f6b952442e318beaf8a7ff0|bf48e5c62dc75d0c52f53c58ff0bc6e5576dad15
 vendor/lib64/mediadrm/libwvdrmengine.so|8f739ef80cb780bf4794a27f76948b87ab7f00cc
 
 # DSP
