@@ -141,7 +141,6 @@ ifdef TARGET_SUPPORTS_MOTO_MODS
 endif
 
 # Treble
-BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Vendor Security Patch Level
