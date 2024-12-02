@@ -407,7 +407,11 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_COPY_FILES += \
+<<<<<<< PATCH SET (6d303d msm8998-common: Copy libutils-v32 in commmon tree)
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
+=======
     prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v33.so
+>>>>>>> BASE      (e97e0e msm8998-common: Build libhidlbase-v32{,.vendor})
 
 # Update this list with what each blob is actually for
 # libstdc++: camera.msm8998
