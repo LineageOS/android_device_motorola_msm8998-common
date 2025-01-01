@@ -103,8 +103,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    gralloc.$(TARGET_MOTO_PLATFORM) \
-    hwcomposer.$(TARGET_MOTO_PLATFORM) \
+    gralloc.msm8998 \
+    hwcomposer.qcom \
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan \
