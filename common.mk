@@ -103,8 +103,15 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
+<<<<<<< PATCH SET (2fbb5e msm8998-common: Update display flags & packages)
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    gralloc.qcom \
+    hwcomposer.qcom \
+=======
     gralloc.$(TARGET_MOTO_PLATFORM) \
     hwcomposer.$(TARGET_MOTO_PLATFORM) \
+>>>>>>> BASE      (966662 msm8998-common: Switch to QTI Memtrack AIDL HAL)
     libdisplayconfig \
     libqdMetaData.system \
     libvulkan \
