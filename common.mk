@@ -75,6 +75,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 
+$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
