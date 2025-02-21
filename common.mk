@@ -172,24 +172,23 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml
 
 # Init
-PRODUCT_PACKAGES += \
-    fstab.qcom
+ifneq ($(TARGET_USES_OEM_AS_VENDOR),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom::$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+else
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom.oem:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom.oem:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
+endif
 
-PRODUCT_PACKAGES += \
-    init.class_main.sh \
-    init.mmi.usb.sh \
-    init.qcom.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
-    wlan_carrier_bin.sh
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
-PRODUCT_PACKAGES += \
-    init.mmi.ramdump.rc \
-    init.moto.rc \
-    init.power.rc \
-    init.qcom.rc \
-    ueventd.qcom.rc
+$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/etc/init/hw/*.rc),\
+        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/$(notdir $f)))
+$(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
+        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_VENDOR)/bin/$(notdir $f)))
 
 # IPACM
 PRODUCT_PACKAGES += \
