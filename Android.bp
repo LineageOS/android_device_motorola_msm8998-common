@@ -19,3 +19,10 @@ install_symlink {
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
+
+install_symlink {
+    name: "dsp_symlink",
+    vendor: true,
+    installed_location: "lib/dsp",
+    symlink_target: "/vendor/dsp",
+}
