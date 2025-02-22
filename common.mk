@@ -141,7 +141,8 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libwifi-hal-ctrl
+    libwifi-hal-ctrl \
+    libavservices_minijail.vendor
 
 # GNSS configs
 PRODUCT_PACKAGES += \
