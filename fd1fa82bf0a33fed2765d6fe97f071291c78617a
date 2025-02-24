@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67464cba_8bca1e79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2025-02-24T04:53:17Z",
+      "side": 1,
+      "message": "I think this broke notification LED on Payton\n\nhttps://gitlab.com/LineageOS/issues/android/-/issues/8376",
+      "revId": "fd1fa82bf0a33fed2765d6fe97f071291c78617a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
