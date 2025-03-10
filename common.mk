@@ -344,6 +344,9 @@ PRODUCT_PACKAGES += \
     libsysutils.vendor
 
 # Recovery
+PRODUCT_PACKAGES += \
+    libinit_msm8998.recovery
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 

@@ -75,7 +75,6 @@ TARGET_FS_CONFIG_GEN += \
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
-TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8998
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3
