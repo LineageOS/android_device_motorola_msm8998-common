@@ -16,6 +16,23 @@
       "message": "does that actually get loaded...?",
       "revId": "25065be852e83b7669867bab97aa74196e2f1229",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5247c5a_6050d08e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-03-10T20:49:39Z",
+      "side": 1,
+      "message": "I would assume it\u0027s already loaded via TARGET_INIT_VENDOR_LIB and this is not needed, need to check the end result blobs",
+      "revId": "25065be852e83b7669867bab97aa74196e2f1229",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
