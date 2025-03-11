@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc08609b_d0c5aae6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-03-11T20:44:51Z",
+      "side": 1,
+      "message": "Funny, Google doesn\u0027t really care. These are still set in go_defaults_common.mk.",
+      "revId": "2490a4b6974b26faef6e8997b8e47bcf82e60cae",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
