@@ -370,7 +370,8 @@ PRODUCT_PACKAGES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/motorola
 
 # Speed Profiles
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
