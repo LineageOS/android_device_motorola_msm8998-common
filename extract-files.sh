@@ -90,11 +90,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libgui_shim_vendor.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${2}"
             ;;
-        # Load wrapped shim
-        vendor/lib64/libmdmcutback.so)
-            [ "$2" = "" ] && return 0
-             "${PATCHELF}" --replace-needed "libqsap_sdk.so" "libqsap_shim.so" "${2}"
-            ;;
         vendor/etc/data/dsi_config.xml|vendor/etc/data/netmgr_config.xml)
             [ "$2" = "" ] && return 0
             fix_xml "${2}"
