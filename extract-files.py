@@ -63,7 +63,6 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.qccvndhal@1.0'
     ): lib_fixup_vendor_suffix,
     (
-        'libqsap_shim',
         'libwpa_client'
     ): lib_fixup_remove,
 }
@@ -110,8 +109,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('libhidltransport.so', 'libhidlbase.so')
         .remove_needed('libhwbinder.so'),
-    'vendor/lib64/libmdmcutback.so': blob_fixup()
-        .replace_needed('libqsap_sdk.so', 'libqsap_shim.so'),
     'vendor/lib/libmot_gpu_mapper.so': blob_fixup()
         .add_needed('libgui_shim_vendor.so'),
     'vendor/lib64/libmotext_inf.so': blob_fixup()
