@@ -1,0 +1,91 @@
+/*
+ * Copyright (C) 2024 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package com.fingerprints.extension@1.0;
+
+struct ImageCaptureData {
+    int32_t mode;
+    int32_t captureResult;
+    int32_t identifyResult;
+    int32_t templateUpdateResult;
+    int32_t enrollResult;
+    int32_t cacResult;
+    int32_t userId;
+    int32_t remainingSamples;
+    int32_t coverage;
+    int32_t quality;
+    vec<int8_t> rawImage;
+    vec<int8_t> enhancedImage;
+};
+
+struct NavigationConfig {
+    int32_t singleClickMinTimeThreshold;
+    int32_t holdClickTimeThreshold;
+    int32_t doubleClickTimeInterval;
+    int32_t fastMoveTolerance;
+    int32_t slowSwipeUpThreshold;
+    int32_t slowSwipeDownThreshold;
+    int32_t slowSwipeLeftThreshold;
+    int32_t slowSwipeRightThreshold;
+    int32_t fastSwipeUpThreshold;
+    int32_t fastSwipeDownThreshold;
+    int32_t fastSwipeLeftThreshold;
+    int32_t fastSwipeRightThreshold;
+};
+
+struct SensorInfo {
+    int32_t sensorDieValidFlag;
+    int32_t hardwareId;
+    string lotId;
+    int32_t waferId;
+    int32_t waferPositionX;
+    int32_t waferPositionY;
+    string productionTimestamp;
+    int32_t companionDieValidFlag;
+    int32_t companionChipHardwareId;
+    string companionChipLotId;
+    int32_t vendorHwValidFlag;
+    vec<int8_t> vendorData;
+    int32_t totalNumOtpBitErrors;
+    int32_t maxNumOtpBitErrorsInByte;
+    int32_t productType;
+};
+
+struct SensorSize {
+    int32_t width;
+    int32_t height;
+};
+
+struct SensorTest {
+    string name;
+    string description;
+    bool waitForFingerDown;
+    string rubberStampType;
+};
+
+struct SensorTestInput {
+    string testLimitsKeyValuePair;
+};
+
+struct SensorTestResult {
+    int32_t resultCode;
+    string resultString;
+    int32_t errorCode;
+    string errorString;
+    vec<int8_t> imageData;
+    string log;
+};
+
+struct SenseTouchConfig {
+    bool success;
+    int32_t version;
+    int32_t ground;
+    int32_t triggerThreshold;
+    int32_t untriggerThreshold;
+    bool authTriggerOnDown;
+    bool authTriggerOnUp;
+    int32_t authButtonTimeoutMs;
+};

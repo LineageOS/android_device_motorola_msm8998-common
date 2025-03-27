@@ -1,0 +1,19 @@
+/*
+ * Copyright (C) 2023 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package com.fingerprints.extension@1.0;
+
+interface IFingerprintSenseTouch {
+    getForce() generates (int32_t force);
+
+    isSupported() generates (bool isSupported);
+
+    finishCalibration(uint32_t ground, uint32_t threshold) generates (bool result);
+
+    setAuthMode(uint32_t mode, uint32_t buttonTimeoutMs) generates (bool result);
+
+    readConfig() generates (SenseTouchConfig senseTouchConfig);
+};
