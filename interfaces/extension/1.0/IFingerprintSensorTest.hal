@@ -1,0 +1,24 @@
+/*
+ * Copyright (C) 2023 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package com.fingerprints.extension@1.0;
+
+import ISensorTestCaptureCallback;
+import ISensorTestCallback;
+
+interface IFingerprintSensorTest {
+    getSensorInfo() generates (SensorInfo sensorInfo);
+
+    getSensorTests() generates (vec<SensorTest> sensorTests);
+
+    oneway runSensorTest(ISensorTestCallback callback, SensorTest test, SensorTestInput input);
+
+    oneway cancelSensorTest();
+
+    oneway capture(ISensorTestCaptureCallback callback, bool waitForFinger, bool uncalibrated);
+
+    oneway cancelCapture();
+};
