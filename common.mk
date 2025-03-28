@@ -47,8 +47,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    libutils-v32
+    libvolumelistener
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
@@ -67,8 +66,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth@1.0.vendor \
-    audio.bluetooth.default \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    audio.bluetooth.default
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -78,10 +76,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5:64 \
-    libbson.vendor \
-    vendor.qti.hardware.camera.device@1.0:64
+    android.hardware.camera.provider@2.4-service
 
 # Cgroup and task_profiles
 PRODUCT_COPY_FILES += \
@@ -97,7 +92,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-service \
@@ -105,27 +99,12 @@ PRODUCT_PACKAGES += \
     gralloc.$(TARGET_MOTO_PLATFORM) \
     hwcomposer.qcom \
     libdisplayconfig \
-    libqdMetaData.system \
     libvulkan \
-    libtinyxml \
     vendor.qti.hardware.memtrack-service
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.2.vendor \
-    libcrypto_shim.vendor \
-    libhidlmemory.vendor
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    libhidlbase-v32.vendor
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor \
-    libion.vendor
+    android.hardware.drm-service.clearkey
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
@@ -141,8 +120,7 @@ PRODUCT_PACKAGES += \
     libbatching \
     libgeofencing \
     libgnss \
-    libwifi-hal-ctrl \
-    libavservices_minijail.vendor
+    libwifi-hal-ctrl
 
 # GNSS configs
 PRODUCT_PACKAGES += \
@@ -154,17 +132,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -204,10 +171,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0.vendor
-
 # LED packages
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -235,13 +198,8 @@ PRODUCT_PACKAGES += \
     MotoActions \
     MotoCommonOverlay
 
-# netmgrd
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
 # OMX
 PRODUCT_PACKAGES += \
-    libc2dcolorconvert \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
@@ -249,7 +207,7 @@ PRODUCT_PACKAGES += \
 
 # Partitions
 PRODUCT_PACKAGES += \
-    dsp_symlink \
+    dsp_symlink
 
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
@@ -305,17 +263,10 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
-
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    android.hardware.power-service-qti
 
 # QCOM
 PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
 
@@ -323,23 +274,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/telephony_system_ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system_ext_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml
-
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
-
-# Radio
-PRODUCT_PACKAGES += \
-    librmnetctl \
-    libsqlite.vendor
-
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.0.vendor \
-    libsysutils.vendor
 
 # Recovery
 PRODUCT_COPY_FILES += \
@@ -351,19 +285,11 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0 \
-    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
-    libpower.vendor \
-    libsensorndkbridge
+    android.hardware.sensors@1.0-service
 
 # Shims
 PRODUCT_PACKAGES += \
-    libgui_shim \
-    libgui_shim_vendor \
-    libcutils_shim.vendor \
-    libmemset_shim \
     libqsap_shim
 
 # Soong
@@ -389,10 +315,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.1-service.msm8998
 
-# Touchscreen
-PRODUCT_PACKAGES += \
-    libtinyxml2
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
@@ -404,15 +326,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
-    android.hardware.vibrator@1.0-service \
-    libhidlbase-v32
-
-# Update this list with what each blob is actually for
-# libstdc++: camera.msm8998
-PRODUCT_PACKAGES += \
-    libstdc++_vendor \
-    libgui_vendor:32 \
-    libutils-v33
+    android.hardware.vibrator@1.0-service
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -425,7 +339,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     hostapd_cli \
-    libnl \
     libqsap_sdk \
     libwifi-hal-qcom \
     libwpa_client \
