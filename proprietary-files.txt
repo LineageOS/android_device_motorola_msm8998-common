@@ -1,7 +1,8 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from lake_retail (QPWS30.61-21-18-7-12).
 
-# __aeabi_uldivmod: libgsl.so, libCB.so, librs_adreno.so, libq3dtools_adreno.so, libGLESv1_CM_adreno.so, libq3dtools_esx.so
+# Current blobs with ELF checks disabled:
+# libGLESv1_CM_adreno.so, libq3dtools_adreno.so, libq3dtools_esx.so, libCB.so, libgsl.so, librs_adreno.so are unable to resolve the following symbol: __aeabi_uldivmod (32-bit)
 
 # ADSP
 vendor/bin/adsprpcd
