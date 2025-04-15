@@ -69,11 +69,18 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default
 
 # Boot control HAL
+ifneq ($(TARGET_USES_OEM_AS_VENDOR),true)
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
 $(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+else
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.qcom \
+    bootctrl.qcom.recovery
+endif
 
 # Camera
 PRODUCT_PACKAGES += \
