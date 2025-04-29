@@ -70,9 +70,6 @@ TARGET_FS_CONFIG_GEN += \
     $(PLATFORM_PATH)/config.fs \
     $(PLATFORM_PATH)/mot_aids.fs
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(PLATFORM_PATH):libinit_msm8998
-
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
