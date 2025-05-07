@@ -110,10 +110,13 @@ TARGET_USES_INTERACTION_BOOST := true
 
 # Properties
 TARGET_ODM_PROP += $(PLATFORM_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
 TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
 TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
+ifeq ($(TARGET_HAS_IMS),true)
+TARGET_PRODUCT_PROP += $(PLATFORM_PATH)/product.prop
+TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor_ims.prop
+endif
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
@@ -121,6 +124,9 @@ TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
 # RIL
 ODM_MANIFEST_SKUS += qcril
 ODM_MANIFEST_QCRIL_FILES := $(PLATFORM_PATH)/odm_manifest_qcril.xml
+ifeq ($(TARGET_HAS_IMS),true)
+DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest_ims.xml
+endif
 
 # Root
 BOARD_ROOT_EXTRA_SYMLINKS := \

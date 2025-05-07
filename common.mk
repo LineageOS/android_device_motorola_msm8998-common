@@ -36,6 +36,12 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+ifeq ($(TARGET_HAS_IMS),true)
+PRODUCT_PACKAGES += \
+    FrameworksResIms \
+    TelephonyResIms
+endif
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
