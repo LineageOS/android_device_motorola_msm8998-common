@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a4aa109_28311d3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 19979
+      },
+      "writtenOn": "2025-05-07T22:55:30Z",
+      "side": 1,
+      "message": "Wouldnt it be better to make ims an opt out, rather than opt-in?",
+      "revId": "81b61050799205c1c71a631a211921538be340e9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
