@@ -14,13 +14,9 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
-    lib_fixup_remove_arch_suffix,
-    lib_fixup_vendorcompat,
-    lib_fixups_user_type,
-    libs_clang_rt_ubsan,
-    libs_proto_3_9_1,
 )
 from extract_utils.main import (
     ExtractUtils,
