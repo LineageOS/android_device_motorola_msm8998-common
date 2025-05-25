@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa21453b_aa4c0dac",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-05-25T08:28:51Z",
+      "side": 1,
+      "message": "What does this even mean?",
+      "revId": "56ad5a765fa8d7f1f1166b9951b4a966bea9b77b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "bdf041ee_bd3537bb",
@@ -14,6 +31,23 @@
       "writtenOn": "2025-05-25T04:00:27Z",
       "side": 1,
       "message": "Leave CR+1 and V+1 votes if these work.",
+      "revId": "56ad5a765fa8d7f1f1166b9951b4a966bea9b77b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1be50a84_f0501016",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-05-25T08:28:51Z",
+      "side": 1,
+      "message": "First of all, PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION is properly set in build/make already. Secondly, google dropped these flags from all their targets including Android Go, so what is this change supposed to fix?",
       "revId": "56ad5a765fa8d7f1f1166b9951b4a966bea9b77b",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
