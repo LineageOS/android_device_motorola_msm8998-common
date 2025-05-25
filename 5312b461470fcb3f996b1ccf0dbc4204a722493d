@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "940505c3_35ee602e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-05-25T11:21:10Z",
+      "side": 1,
+      "message": "Sustained performance is supported in QTI power HAL https://github.com/LineageOS/android_vendor_qcom_opensource_power/blob/lineage-22.2/power-8998.c#L184",
+      "revId": "5312b461470fcb3f996b1ccf0dbc4204a722493d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
