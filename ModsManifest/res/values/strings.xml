@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Labels for the MOD_INTERNAL permission -->
+    <string name="mods_permlab_Internal">Access to Motorola mods</string>
+    <string name="mods_permdesc_Internal">Allows an app to use Motorola mods.</string>
+
+    <!-- Labels for the MOD_SERVICE permission -->
+    <string name="mods_permlab_Service">Motorola mod service access</string>
+    <string name="mods_permdesc_Service">Allows an app to access Motorola mod service.</string>
+
+</resources>

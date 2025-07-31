@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.motorola.modmanifest" coreApp="true" android:sharedUserId="android.uid.system" >
+
+    <!-- Allows an application to use Motorola mods -->
+    <permission android:name="com.motorola.mod.permission.MOD_INTERNAL"
+                android:label="@string/mods_permlab_Internal"
+                android:description="@string/mods_permdesc_Internal"
+                android:protectionLevel="normal" />
+    <permission android:name="com.motorola.mod.permission.MOD_SERVICE"
+                android:label="@string/mods_permlab_Service"
+                android:description="@string/mods_permdesc_Service"
+                android:protectionLevel="normal" />
+
+</manifest>

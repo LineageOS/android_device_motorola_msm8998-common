@@ -1,0 +1,12 @@
+android_app {
+    name: "ModsManifest",
+    certificate: "platform",
+    platform_apis: true,
+
+    // Disable dexpreopt and verify_uses_libraries check as the app
+    // contains no Java code to be dexpreopted.
+    enforce_uses_libs: false,
+    dex_preopt: {
+        enabled: false,
+    },
+}
