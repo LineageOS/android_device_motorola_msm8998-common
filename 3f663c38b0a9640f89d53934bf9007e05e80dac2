@@ -16,6 +16,23 @@
       "message": "I\u0027d rather not migrate until kernel is fixed.",
       "revId": "3f663c38b0a9640f89d53934bf9007e05e80dac2",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4c51f629_492315ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2025-08-26T20:35:42Z",
+      "side": 1,
+      "message": "I assumed based on sdm632 being very similar that we lacked kernel support as well, just checked, moto 8998 supports mdss_ld, so it\u0027s just sdm632",
+      "revId": "3f663c38b0a9640f89d53934bf9007e05e80dac2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
