@@ -190,8 +190,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sdm \
-    vendor.lineage.livedisplay-service.sysfs
+    vendor.lineage.livedisplay-service.sdm
 
 # Media
 PRODUCT_COPY_FILES += \
