@@ -174,7 +174,7 @@ vendor/bin/fm_qsoc_patches
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor
 
-# GNSS - from FP3 - 6.A.031.2
+# GNSS - from FP3 - 6.A.040.2
 vendor/bin/loc_launcher|923d85bd727fb809b43fa86adbf739dd2b55285c
 vendor/bin/lowi-server|5d18cc8854549c366f63cdce29178eb48c9b24b0
 vendor/bin/mlid|46ddb37a149cf09bff592437a41ff30e849c234e
@@ -376,7 +376,7 @@ vendor/lib64/libperipheral_client.so
 # Postprocessing
 vendor/lib64/libdisp-aba.so
 
-# QCC - from FP3 - 6.A.031.2
+# QCC - from FP3 - 6.A.040.2
 system_ext/lib64/libqcc.so|869b683bb19acff628571703d7531d7de40247d1
 system_ext/lib64/libqcc_file_agent_sys.so|afa96a113e3b600253580bc103100347f354da92
 system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0-halimpl.so|b139b448e1942905b029a80b9a6d4e98d1b9dd7d
