@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4be0fd83_e967e221",
+        "filename": "vendor.prop",
+        "patchSetId": 1
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 19252
+      },
+      "writtenOn": "2026-04-25T11:49:22Z",
+      "side": 1,
+      "message": "As mentioned, here\u0027s the original line",
+      "revId": "36df70111ae064c0922b60921708877c24b34e7d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
