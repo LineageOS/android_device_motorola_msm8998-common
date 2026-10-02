@@ -1,0 +1,16 @@
+//
+// SPDX-FileCopyrightText: 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libmothealth_shim",
+    vendor: true,
+    srcs: ["health_shim.cpp"],
+    shared_libs: [
+        "android.hardware.health@2.0",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+}
